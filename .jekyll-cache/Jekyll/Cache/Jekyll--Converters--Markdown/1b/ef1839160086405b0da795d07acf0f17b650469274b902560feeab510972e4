@@ -1,0 +1,17 @@
+I"Y<p>RNN에 대한</p>
+<ul>
+  <li>
+    <p>각각의 알파벳을 one hot coding 으로 바꿔 각기 다른 표현을 가지게 한다.</p>
+  </li>
+  <li>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"inpuot size"</span><span class="p">,</span> <span class="nb">input</span><span class="p">.</span><span class="n">size</span><span class="p">())</span>
+<span class="c1"># input size torch.size([3,5,4])
+# 3 is batch size/ 5 is seq size / 4 is one-hot size
+</span></code></pre></div>    </div>
+  </li>
+  <li>actually softmax is not working well , why?<br />
+each softmax they don’t really receive the previous data so it 
+doesn’t have any previous status for only given status predicting next is a little but difficult</li>
+</ul>
+
+:ET

@@ -1,0 +1,11 @@
+---
+layout: post 
+title: "Linear Algebra MIT 18.06 Lecture 02, Elimination with Matrices"
+date: 2020-04-24
+description: Linear Algbra Study with MIT 18.06 Lecture 02  
+comments: true
+#published : false
+---
+
+![ ]({{site.url}}/assets/img/post_img/LINALG/[2]/1.jpg)
+![ ]({{site.url}}/assets/img/post_img/LINALG/[2]/2.jpg)

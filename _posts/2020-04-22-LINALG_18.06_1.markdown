@@ -1,0 +1,11 @@
+---
+layout: post 
+title: "Linear Algebra MIT 18.06 Lecture 01, The Geometry of Linear Algebra"
+date: 2020-04-22
+description: Linear Algbra Study with MIT 18.06 Lecture 01  
+comments: true
+#published : false
+---
+
+![ ]({{site.url}}/assets/img/post_img/LINALG/[1]/1.jpg)
+![ ]({{site.url}}/assets/img/post_img/LINALG/[1]/2.jpg)

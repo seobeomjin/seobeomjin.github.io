@@ -1,0 +1,22 @@
+---
+layout: post
+title: RNN Basic Pytorch Lecture & Tutotial 
+date: 2020-04-14
+description: Sung kim 님의 YouTube강의를 듣고 실습을 함께 공부해 보았습니다. 
+commnets: true
+---
+
+RNN에 대한 
+- 각각의 알파벳을 one hot coding 으로 바꿔 각기 다른 표현을 가지게 한다.  
+
+- 
+```python
+print("inpuot size", input.size())
+# input size torch.size([3,5,4])
+# 3 is batch size/ 5 is seq size / 4 is one-hot size
+```
+
+- actually softmax is not working well , why?  
+each softmax they don't really receive the previous data so it 
+doesn't have any previous status for only given status predicting next is a little but difficult    
+

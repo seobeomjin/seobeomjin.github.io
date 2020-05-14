@@ -1,0 +1,73 @@
+I"t<div id="articles">
+  <h1>Articles</h1>
+  <ul class="posts noList">
+    
+      <li>
+      	<span class="date">26 Apr 2020</span>
+      	<h3><a href="/blog/rightworld/">인간 욕구 개편의 필요성, "지속 가능성"</a></h3>
+      	<p class="description">Netflix Documentary COWSPIRACY</p>
+      </li>
+    
+      <li>
+      	<span class="date">25 Apr 2020</span>
+      	<h3><a href="/blog/SCFP/">Convolutional neural network based on SMILES representation of compounds for detecting chemical motif review</a></h3>
+      	<p class="description">CNN을 활용한 SCFP 정의, chemical motif detection에 관한 논문을 리뷰합니다.</p>
+      </li>
+    
+      <li>
+      	<span class="date">24 Apr 2020</span>
+      	<h3><a href="/blog/LINALG_18.06_2/">Linear Algebra MIT 18.06 Lecture 02, Elimination with Matrices</a></h3>
+      	<p class="description">Linear Algbra Study with MIT 18.06 Lecture 02</p>
+      </li>
+    
+      <li>
+      	<span class="date">22 Apr 2020</span>
+      	<h3><a href="/blog/LINALG_18.06_1/">Linear Algebra MIT 18.06 Lecture 01, The Geometry of Linear Algebra</a></h3>
+      	<p class="description">Linear Algbra Study with MIT 18.06 Lecture 01</p>
+      </li>
+    
+      <li>
+      	<span class="date">15 Apr 2020</span>
+      	<h3><a href="/blog/Machine-Learning-with-Docker-1/">Machine Learning model releasing with Docker [1]</a></h3>
+      	<p class="description">머신러닝 모델을 웹으로 릴리즈 하기 위한 공부를 하고있습니다.</p>
+      </li>
+    
+      <li>
+      	<span class="date">14 Apr 2020</span>
+      	<h3><a href="/blog/Study-Status/">Study Status</a></h3>
+      	<p class="description">Study List|-- Machine Learning     |-- Time series Domain         |-- Natural Language Processing            |-- &lt;...</p>
+      </li>
+    
+      <li>
+      	<span class="date">14 Apr 2020</span>
+      	<h3><a href="/blog/RNN-Basic/">RNN Basic Pytorch Lecture &amp; Tutotial</a></h3>
+      	<p class="description">Sung kim 님의 YouTube강의를 듣고 실습을 함께 공부해 보았습니다.</p>
+      </li>
+    
+      <li>
+      	<span class="date">13 Apr 2020</span>
+      	<h3><a href="/blog/%EC%B9%B8%ED%8A%B8%EC%A0%95%EC%96%B8%EB%AA%85%EB%A0%B9/">칸트의 정언명령에 대한 고찰</a></h3>
+      	<p class="description">칸트의 정언명령에 관한 고찰 기록</p>
+      </li>
+    
+      <li>
+      	<span class="date">13 Apr 2020</span>
+      	<h3><a href="/blog/Docker-Tutorial/">Docker QuickStart [1]</a></h3>
+      	<p class="description">도커 퀵스타트를 진행하던 중 만난 어려움</p>
+      </li>
+    
+      <li>
+      	<span class="date">23 Mar 2020</span>
+      	<h3><a href="/blog/example-for-md/">albumentations - fast image augmentation library 소개 및 사용법 Tutorial</a></h3>
+      	<p class="description">image augmentation library인 albumentations에 대한 소개와 사용 방법을 Tutorial로 정리해보았습니다.</p>
+      </li>
+    
+      <li>
+      	<span class="date">22 Mar 2020</span>
+      	<h3><a href="/blog/First-post/">First Post</a></h3>
+      	<p class="description">github.io를 개설해보았습니다.</p>
+      </li>
+    
+  </ul>
+</div>
+:ET

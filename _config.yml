@@ -1,0 +1,35 @@
+title: IDEA of Noah
+description: Daily Record
+
+#url: http://brianmaierjr.github.com/long-haul
+url: https://seobeomjin.github.io/
+baseurl: ""
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
+
+disqus_url: https://disqus.com/by/disqus_fToTFbC01b/
+disqus_id : seobeomjin
+
+markdown: kramdown
+highlighter: rouge
+#plugins: [jekyll-paginate]
+gems:
+ - jekyll-paginate
+ - jekyll-archives
+ - jekyll-time-to-read
+paginate: 10
+
+navigation:
+  - title: Home
+    url: /index.html
+  - title: About
+    url: /about
+  - title: Archives
+    url: /contact
+
+social:
+  github: seobeomjin
+  facebook: seobeomjin0
+  email: chon0412@khu.ac.kr
+
+google_analytics: "UA-58263416-1"
