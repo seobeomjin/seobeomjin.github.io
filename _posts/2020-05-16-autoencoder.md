@@ -13,9 +13,7 @@ comments : true
 
 - gradient descent 는 optimal problem 을 푸는 하나의 방법으로, optimal theory를 공부할 때 가장 기초적인 방법 
 th) 선형대수적 어프록시메이션도 있었음, 한 번에 찾는. <br>
-
 - Loss Update 시, Taylor expansion에서 우리는 first derivate만 쓰니까, 아주 가까운 근방의 approximation만 update를 시킬 수 있음. 그러므로 learning rate를 작게 가져가야 함. learning rate가 크면 첨펑첨펑 함. <br> 
-
 - batch에서 구한 gradient와 전체 평균 gradient가 같을 거라고 approximation을 또 함. 배치 하나 때서 업데이트 배치 하나 때서 업데이트. 평균을 전체 epoch에 대해 구할 수 없으니 배치로 업데이트 함. <br> 
 
 #### back propagation 관점의 Loss function 
@@ -49,12 +47,6 @@ th) 선형대수적 어프록시메이션도 있었음, 한 번에 찾는. <br>
 #### Dimensionality Reduction slide
 
 ![Dimensionality Reduction slide]({{site.url}}/assets/img/post_img/autoencoder/dimensionality_reduction.png)
-
-
-#### manifold 
-
-![slide]({{site.url}}/assets/img/post_img/autoencoder/manifold.jpg)
-
 
 #### GAN 
 
