@@ -1,7 +1,7 @@
 ---
 layout: post 
 title: Convolutional neural network based on SMILES representation of compounds for detecting chemical motif review
-data : 2020-04-25
+date : 2020-04-25
 description: CNN을 활용한 SCFP 정의, chemical motif detection에 관한 논문을 리뷰합니다. 
 comments: true
 ---
