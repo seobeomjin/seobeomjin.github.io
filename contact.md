@@ -9,8 +9,11 @@ title: Archives
 		<li><a href="https://seobeomjin.github.io/blog/SCFP/" target = "_blank"> <b> Convolutional neural network based on SMILES representation of compounds for detecting chemical motif review - [1] </b></a>, 25/04/2020 </li>
 	<h1 class="pageTitle">  </h1>
 	<h1 class="pageTitle"> ML & RL </h1>
+	<li><a href="https://seobeomjin.github.io/blog/autoencoder/" target = "_blank"> <b>  Naver Engineering Autoencoder 발표 정리 </b></a>, 16/05/2020 </li>	
 	<h1 class="pageTitle">  </h1>
 	<h1 class="pageTitle"> Mathematics & Statistics </h1>
+	<li><a href="https://seobeomjin.github.io/blog/LINALG_18.06_1/" target = "_blank"> <b>  Linear Algbra MIT 18.06 Lecture 01 </b></a>, 22/04/2020 </li>	
+	<li><a href="https://seobeomjin.github.io/blog/LINALG_18.06_2/" target = "_blank"> <b>  Linear Algbra MIT 18.06 Lecture 02 </b></a>, 24/04/2020 </li>	
 	<!--
 	<li><a href="https://seobeomjin.github.io/blog/LINALG_18.06_1/" target = "_blank"> <b> Linear Algebra MIT 18.06 Lecture 01 </b></a>, 22/04/2020 </li>
 	<li><a href="https://seobeomjin.github.io/blog/LINALG_18.06_2/" target = "_blank"> <b> Linear Algebra MIT 18.06 Lecture 02 </b></a>, 24/04/2020 </li>

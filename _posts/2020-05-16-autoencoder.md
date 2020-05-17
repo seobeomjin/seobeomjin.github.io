@@ -1,6 +1,6 @@
 ---
 layout: post 
-title: Naver Engineering Autoencoder 강의 정리
+title: Naver Engineering Autoencoder 발표 정리
 date: 2020-05-16 
 description : naver engineering Autoencoder 발표에 대한 정리입니다. 
 comments : true
@@ -28,7 +28,7 @@ th) 선형대수적 어프록시메이션도 있었음, 한 번에 찾는. <br>
 
 - 해당 관점의 point는 "네트워크의 출력값이 우리가 원하는 정답이 나올 확률이 높기를 바란다."라는 점. 이 관점에서는 우리가 학습시키는 모델의 파라미터는 우리가 추측하고자 하는 분포의 평균값이 될 수 있음. (예를 들어, Gaussian이라 가정할 때) 우리는 학습을 시킬수록 그 정답의 분포의 평균과 가까워 지는 것임. 
 이럴 경우 L = -log(p(y|f_theta(x)) 로 표현 가능. <br>  
-이렇게 해석할 경우, 우리는 분포를 예측한 것이기 때문에, 이 분포에서 샘플링을 하여, 고정 입력, 고정 출력이 아니라, `고정입력, 다른 출력`이 가능하게 됨. 
+이렇게 해석할 경우, 우리는 분포를 예측한 것이기 때문에, 이 분포에서 샘플링을 하여, 고정 입력, 고정 출력이 아니라, **고정입력, 다른 출력**이 가능하게 됨. 
 즉, 확률적으로 샘플링이 가능.<br> 
 
 - 확률 분포가 Gaussian이냐 , Bernoulli냐.  <br>
