@@ -5,20 +5,20 @@ date : 2020-10-13
 description : 
 published : true
 --- 
-Here is repository which I record the flow of read papers. <br>
+Here is a repository which I record the flow of read papers. <br>
 If want to check details of a certain paper, please check google docs "papers review".  
 
-### What I am interested in nowdays 
+<!-- ### What I am interested in nowdays 
 Natural Language Model <br>
 Reinforcement learning <br>
-Can we build a model which can generalize
+Can we build a model which can generalize -->
 
 ### What I would read 
 * Ng, Nathan, Kyunghyun Cho, and Marzyeh Ghassemi. "SSMBA: Self-Supervised Manifold Based Data Augmentation for Improving Out-of-Domain Robustness." arXiv preprint arXiv:2009.10195 (2020).
 
 * Chevalier-Boisvert, Maxime, et al. "Babyai: A platform to study the sample efficiency of grounded language learning." International Conference on Learning Representations. 2018.
-    Luketina, Jelena, et al. "A survey of reinforcement learning informed by natural language." arXiv preprint arXiv:1906.03926 (2019).
-        Petroni, Fabio, et al. "Language models as knowledge bases?." arXiv preprint arXiv:1909.01066 (2019).
+    - Luketina, Jelena, et al. "A survey of reinforcement learning informed by natural language." arXiv preprint arXiv:1906.03926 (2019).
+        - Petroni, Fabio, et al. "Language models as knowledge bases?." arXiv preprint arXiv:1909.01066 (2019).
 
 
 ### What I've read 
@@ -56,7 +56,7 @@ Can we build a model which can generalize
         1. 리셉터와 드러그 간의 결합을 classification 하기 위한 Stacked AE 와 FingerPrint 융합을 활용한 데이터 인풋 이용 
         2. 이 후 그것을 RF classifier에 넣어 활용
         3. 성능은 2017 당시 outperform 
-
+        
 * All SMILES Variational Autoencoder
     - Abstract - Figures&Tables - Conclusion - methods
     - Summarization by 3 lines <br>
@@ -64,7 +64,7 @@ Can we build a model which can generalize
         2. encoding 이후 regressor를 최적화 시켜, supervised, semi-supervised 에서 최적의 성능을 냄
         3. decoder를 통해 유의미한 SMILES 생성 가능. 
         (th) 다중 스마일스 사용 / 공통 분자, 다른 스마일즈 간의 동일한 의미를 찾아냄 , molecular graph의 모든 pathway에 그 정보가 흐를 수 있도록 함. 
-
+<br>
 * Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules
     - Abstrat - Figures&Tables
 
