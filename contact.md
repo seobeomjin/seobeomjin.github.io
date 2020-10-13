@@ -6,12 +6,13 @@ title: Archives
 <div class="post">
 	<h1 class="pageTitle">  </h1>
 	<h1 class="pageTitle"> Paper Review </h1>
-		<li><a href="https://seobeomjin.github.io/blog/read_paper/" target = "_blank"> <b> Record of read papers </b></a>, 13/13/2020 </li>
+		<li><a href="https://seobeomjin.github.io/blog/read_paper/" target = "_blank"> <b> Record of read papers </b></a>, 13/10/2020 </li>
 		<li><a href="https://seobeomjin.github.io/blog/SCFP/" target = "_blank"> <b> Convolutional neural network based on SMILES representation of compounds for detecting chemical motif review - [1] </b></a>, 25/04/2020 </li>
 	<h1 class="pageTitle">  </h1>
 	<h1 class="pageTitle">  </h1>
 	<h1 class="pageTitle">  </h1>
 	<h1 class="pageTitle"> ML & RL </h1>
+	<li><a href="https://seobeomjin.github.io/blog/Bengio_with_Lex/" target = "_blank"> <b>  Record of Yoshua Bengio's interview with Lex Fridman </b></a>, 13/10/2020 </li>	
 	<li><a href="https://seobeomjin.github.io/blog/autoencoder/" target = "_blank"> <b>  Naver Engineering Autoencoder 발표 정리 </b></a>, 16/05/2020 </li>	
 	<h1 class="pageTitle">  </h1>
 	<h1 class="pageTitle">  </h1>

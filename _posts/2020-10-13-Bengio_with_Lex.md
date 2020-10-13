@@ -1,6 +1,6 @@
 ---
 layout: post 
-title : Record of Youshua Bengio's interview with Lex Fridman
+title : Record of Yoshua Bengio's interview with Lex Fridman
 date : 2020-10-13
 description : 
 public : true 
@@ -30,7 +30,7 @@ Note that it is not refined well, but raw memo.
 
 * I would kike to build sysyems that can use the same priciples the same learning mechanisms to learn from human agents whatever their language  
 
-* AI winter 
+* AI winter <br>
 listen to your inner voice 
 don't be tryinh to just please the corwds and fashions 
 you have to stick to your beliefs  
