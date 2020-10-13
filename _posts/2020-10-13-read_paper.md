@@ -55,7 +55,7 @@ Can we build a model which can generalize -->
     - Summarization by 3 lines <br>
         1. 리셉터와 드러그 간의 결합을 classification 하기 위한 Stacked AE 와 FingerPrint 융합을 활용한 데이터 인풋 이용 
         2. 이 후 그것을 RF classifier에 넣어 활용
-        3. 성능은 2017 당시 outperform 
+        3. 성능은 2017 당시 outperform <br><br>
         
 * All SMILES Variational Autoencoder
     - Abstract - Figures&Tables - Conclusion - methods
@@ -63,8 +63,7 @@ Can we build a model which can generalize -->
         1. single molecule에 대해 multiple SMILES를 encoding 함 (stacked RNN, pooling hidden representation , attentional mechanism. 
         2. encoding 이후 regressor를 최적화 시켜, supervised, semi-supervised 에서 최적의 성능을 냄
         3. decoder를 통해 유의미한 SMILES 생성 가능. 
-        (th) 다중 스마일스 사용 / 공통 분자, 다른 스마일즈 간의 동일한 의미를 찾아냄 , molecular graph의 모든 pathway에 그 정보가 흐를 수 있도록 함. 
-<br>
+        (th) 다중 스마일스 사용 / 공통 분자, 다른 스마일즈 간의 동일한 의미를 찾아냄 , molecular graph의 모든 pathway에 그 정보가 흐를 수 있도록 함. <br><br>
 * Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules
     - Abstrat - Figures&Tables
 
@@ -75,7 +74,7 @@ Can we build a model which can generalize -->
     - Summarization by 3 lines <br>
         1. 기존의 CAM은 response based visual explantion의 모델이지만 CNN의 성능을 낮추는 단점이 있었음. 
         2. Attention mechanism 을 적용하여, 어텐션 맵을 만드는 동시에, 성능 향상에 기여하였음.
-        3. 기존의 모델에 비해 성능이 좋고 어텐션 맵을 표현함.  
+        3. 기존의 모델에 비해 성능이 좋고 어텐션 맵을 표현함. 
 
 
 2020-05-23 
@@ -89,7 +88,7 @@ Can we build a model which can generalize -->
     - Summarization by 3 lines <br>
         1. protein-ligand complex + feature vector를 활용한 4차원 데이터 구조 인풋 
         2. CONV layer와 DENSE layer 통과, 여러 지표에서 outperform (다양한 SFs)
-        3. 피처들의 특징을 되돌아 볼 수 있음을 시사 (th- 하지만 데이터 구조가 해석이 어려운 이상, 도움이 될지.)
+        3. 피처들의 특징을 되돌아 볼 수 있음을 시사 (th- 하지만 데이터 구조가 해석이 어려운 이상, 도움이 될지.) <br><br>
 
 * Entangled Conditional Adversarial Autoencoder for de Novo Drug Discovery
     - Abstract - Figures&Tables 
@@ -102,8 +101,7 @@ Can we build a model which can generalize -->
         1. MD에서 사용되는 다양한 SF 함수들이 있음. 
         Physics / Empirical / Knowledge based / ML based / + Hybrid SFs briefly
         2. 해당 함수들의 장단점을 소개 
-        3. outperform을 낼 수 있는 ML , 새로운 universal , novel SF from ML based를 강조 
-
+        3. outperform을 낼 수 있는 ML , 새로운 universal , novel SF from ML based를 강조 <br><br>
 
 * Atomic Convolutional Networks for Predicting Protein-Ligand Binding Affinity
     - Abstract - Figures&Tables - my conclusion - Discussion and Result - Methods 
