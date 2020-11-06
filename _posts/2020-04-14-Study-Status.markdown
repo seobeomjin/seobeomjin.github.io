@@ -1,3 +1,10 @@
+---
+layout : post 
+title : Study Log
+date : 2020-04-14
+published : false
+---
+
 ### Study List
 
     |-- Machine Learning 
@@ -46,13 +53,9 @@ LECTURE STUDY METHOD <br>
 
 ### Study Log
 
-- 
-
-
 ### Literature 
 - Demian (12/04-19/04) <br>
     자연스러운 것은 무엇인가, 자연은 어떻게 흘러가야 하는가. 
-
 
 ### github io management 
 - 블로그 이름을 바꾸려면 우선, **_config.yml** 파일을 수정해야 함. 

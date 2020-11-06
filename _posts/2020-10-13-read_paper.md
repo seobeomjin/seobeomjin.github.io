@@ -14,14 +14,70 @@ Reinforcement learning <br>
 Can we build a model which can generalize -->
 
 ### What I would read 
-* Ng, Nathan, Kyunghyun Cho, and Marzyeh Ghassemi. "SSMBA: Self-Supervised Manifold Based Data Augmentation for Improving Out-of-Domain Robustness." arXiv preprint arXiv:2009.10195 (2020).
+
+* about meta learning 
+    https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html
+    https://talkingaboutme.tistory.com/entry/DL-Meta-Learning-Learning-to-Learn-Fast
+
+
+* (reading...) Ng, Nathan, Kyunghyun Cho, and Marzyeh Ghassemi. "SSMBA: Self-Supervised Manifold Based Data Augmentation for Improving Out-of-Domain Robustness." arXiv preprint arXiv:2009.10195 (2020).
 
 * Chevalier-Boisvert, Maxime, et al. "Babyai: A platform to study the sample efficiency of grounded language learning." International Conference on Learning Representations. 2018.
     - Luketina, Jelena, et al. "A survey of reinforcement learning informed by natural language." arXiv preprint arXiv:1906.03926 (2019).
         - Petroni, Fabio, et al. "Language models as knowledge bases?." arXiv preprint arXiv:1909.01066 (2019).
 
+* Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations
+
+* Liquid Time-constant Networks
+
+* Learning De-biased Representations with Biased Representations
 
 ### What I've read 
+
+2020-10-20 
+* Fast-RCNN
+    이 때, classificaiton loss와 bounding box regression을 적절하게 엮어주는 것이 필요하며, 이를 multi task loss라고 합니다.
+
+    즉, CNN 단을 Object Detection에 맞게끔 fine-tuning 하는 것이 성능 향상의 키 포인트 였습니다. 
+
+    object detection 테스크를 푸는 end-to-end 모델을 제시하면서 학습 단계를 간소화시키고 정확도와 성능 모두를 향상시켰다는 의의
+
+    deep ConvNets are adept at directly learning scale invariance ? 
+
+* Faster-RCNN
+    그동안 Selective Search를 사용하여 계산해왔던 Region Proposal 단계를 Neural Network 안으로 끌어와서 진정한 의미의 end-to-end object detection 모델을 제시
+
+    RPN은 앞서서 Classification과 Bouding Box Regression을 수행하였는데요, 로스 펑션은 이 두 가지 테스크에서 얻은 로스를 엮은 형태를 취하고 있습니다.
+
+     RPN과 Fast R-CNN 두 네트워크를 사이 좋게 엮어서 학습시키는 방법에 대해서 알아보겠습니다.
+
+     4단계에 걸쳐서 모델을 번갈아서 학습시키는 Alternating Training 기법을 취합니다. 
+
+     
+
+
+
+2020-10-18 
+* DOTA: A Large-scale Dataset for Object Detection in Aerial Images
+    - Abstract - Figures&Tables - Introduction - my conclusion 
+    - Summrization by 3 lines 
+        1. areal image domain 에서 object detection 
+        2. DOTA dataset 제공과 더불어 SOTA 모델 
+        3. 
+
+2020-10-17
+* De-biased 
+
+
+2020-10-13
+
+* Ng, Nathan, Kyunghyun Cho, and Marzyeh Ghassemi. "SSMBA: Self-Supervised Manifold Based Data Augmentation for Improving Out-of-Domain Robustness." arXiv preprint arXiv:2009.10195 (2020).
+    - Abstract - Figures&Tablse - Conclusion 
+        corruption function 을 구성하여 기존의 데이터 x 를 x' 으로 만들고 이를 다시 reconstruction 하여 x_hat 을 만들어 augemented_dataset을 구성한다. 이 때 x'은 manifold 위로 projection하여 x_hat이 만들어진다.
+        (th) 이게 어떻게 projection이라고 말할 수 있는걸까? introduction 읽어봐야 할 듯.   
+
+
+
 
 2020-06 ~ 2020-08 
 * Öztürk, Hakime, Arzucan Özgür, and Elif Ozkirimli. "DeepDTA: deep drug–target binding affinity prediction." Bioinformatics 34.17 (2018): i821-i829.
