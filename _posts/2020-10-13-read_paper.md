@@ -35,7 +35,7 @@ Can we build a model which can generalize -->
 ### What I've read 
 
 2020-10-20 
-* Fast-RCNN
+* Fast-RCNN <br>
     이 때, classificaiton loss와 bounding box regression을 적절하게 엮어주는 것이 필요하며, 이를 multi task loss라고 합니다.
 
     즉, CNN 단을 Object Detection에 맞게끔 fine-tuning 하는 것이 성능 향상의 키 포인트 였습니다. 
@@ -44,7 +44,7 @@ Can we build a model which can generalize -->
 
     deep ConvNets are adept at directly learning scale invariance ? 
 
-* Faster-RCNN
+* Faster-RCNN <br>
     그동안 Selective Search를 사용하여 계산해왔던 Region Proposal 단계를 Neural Network 안으로 끌어와서 진정한 의미의 end-to-end object detection 모델을 제시
 
     RPN은 앞서서 Classification과 Bouding Box Regression을 수행하였는데요, 로스 펑션은 이 두 가지 테스크에서 얻은 로스를 엮은 형태를 취하고 있습니다.
