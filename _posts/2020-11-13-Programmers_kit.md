@@ -7,6 +7,7 @@ publised : true
 ---
 
 ## Programmers 코딩테스트 고득점 kit  
+<br>
 
 ### Hash 
 1. 마라톤 : 참가자,완주자 문자열 배열을 입력으로 주면 완주하지 못한 사람의 이름을 반환하는 문제<br>
@@ -103,7 +104,7 @@ publised : true
         sorted_numbers_str = sorted(numbers_str, key= lambda x : x*5 ,reverse=True)
         return str(int(''.join(sorted_numbers_str)))
     ```
-    - 첫 글자의 크기(ASCII) 순서대로(오름차순) 2) 글자의 크기가 같다면 그 다음 길이를 체크.
+    - 첫 글자의 크기(ASCII) 순서대로(오름차순) 2) 글자의 크기가 같다면 그 다음 길이를 체크.<br>
 
 3. H-Index : 주어진 배열에서 h보다 큰 값이 h개 이상 존재하는 h의 최댓값 구하기Lv2 <br>
     ```python
@@ -160,7 +161,7 @@ publised : true
     # print(Q2_solution([93, 30, 55],[1, 30, 5]))
     ```
 - 순차적으로 진행이니까 들어오는대로 처리되게 만들어야 함. 
-- 맨 앞의 것부터 시간 순으로 처리. 
+- 맨 앞의 것부터 시간 순으로 처리. <br>
 
 3. 다리를 지나는 트럭 : 트럭들이 순서대로 특정 무게를 견딜 수 있는 다리 위를 지나갈 때, 모든 트럭이 다리 위를 건너는 데에 걸리는 최소시간 return Lv2 <br>
     ```python 
@@ -181,7 +182,7 @@ publised : true
         return time
     # print(Q3_solution(2,10,[7,4,5,6]))
     ```
-- 이 풀이의 핵심은, 1초가 지날 때마다 앞에서 0을 하나씩 빼고, 뒤에서 아이템을 하나씩 더해주는데, 다리의 무게에 제약을 주어서 무게를 버틸 수 있으면 + next truck 이고 아니면 그냥 0(index) 추가임
+- 이 풀이의 핵심은, 1초가 지날 때마다 앞에서 0을 하나씩 빼고, 뒤에서 아이템을 하나씩 더해주는데, 다리의 무게에 제약을 주어서 무게를 버틸 수 있으면 + next truck 이고 아니면 그냥 0(index) 추가임<br>
 
 4. 프린터 : 중요도가 높은 문서를 먼저 인쇄하도록 구성. 
     ```python 
@@ -215,15 +216,15 @@ publised : true
 
 
 - 프로그래머스 고득점 kit
-    - Hash 4/4 
+    - Hash 4/4 (DONE)
     - 완전탐색 
     - 깊이/너비 우선 탐색 
-    - 정렬 3/3
+    - 정렬 3/3 (DONE)
 
-    - Stack/Que 4/4 
+    - Stack/Que 4/4 (DONE)
     - 힙 
     
     - DP
     - 탐욕법 
     - 이분탐색
-    -그래프
+    - 그래프
