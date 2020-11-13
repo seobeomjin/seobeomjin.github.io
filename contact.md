@@ -5,6 +5,8 @@ title: Archives
 
 <div class="post">
 	<h1 class="pageTitle">  </h1>
+	<h1 class="pageTitle"> Algorithm </h1>
+		<li><a href="https://seobeomjin.github.io/blog/Programmers_kit/" target = "_blank"> <b> Programmers 코딩테스트 kit 문제풀이 요약 </b></a>, 13/11/2020 </li>
 	<h1 class="pageTitle"> Paper Review </h1>
 		<li><a href="https://seobeomjin.github.io/blog/ABN/" target = "_blank"> <b> Attention Branch Network 리뷰 </b></a>, 08/11/2020 </li>
 		<li><a href="https://seobeomjin.github.io/blog/read_paper/" target = "_blank"> <b> Record of read papers </b></a>, 13/10/2020 </li>
