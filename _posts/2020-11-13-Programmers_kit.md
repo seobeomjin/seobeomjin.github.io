@@ -17,7 +17,7 @@ publised : true
         answer = collections.Counter(participant) - collections.Counter(completion)
         return list(answer.keys())[0]
 ```
-2. 전화번호 목록 : 전화번호들이 담긴 배열이 주어지념ㄴ <br>
+2. 전화번호 목록 : 전화번호들이 담긴 배열이 주어지면 배열 내의 특정 번호가 또 다른 번호의 접두어로 겹치는지를 체크하는 문제 <br>
 ```python 
     def solution(phonebook):
         phonebook = sorted(phonebook)
@@ -80,7 +80,38 @@ publised : true
 
 
 
-<!-- ### Exhaustive Search  -->
+### Exhaustive Search
+1. 모의고사 : 수포자 학생 세명이서 어떤 규칙을 통해 문제를 찍었고, 문제의 답이 배열로 주어질 때 가장 많이 맞춘 학생을 return, 동점일 시 오름차순으로 배열<br>
+```python 
+    def solution(answers):
+    answer =[]
+    no1 = [1,2,3,4,5] # 5로 계속 반복 / 0,1,2,3,4,  5,6,7,8,9, 10,11,12,13,14, 
+    no2 = [2,1,2,3,2,4,2,5] # 8로 
+    no3 = [3,3,1,1,2,2,4,4,5,5] # 10으로 
+    count = [[1,0], [2,0], [3,0]]
+    for idx in range(len(answers)): 
+        if answers[idx] == no1[idx%5] : 
+            count[0][-1] +=1 
+        if answers[idx] == no2[idx%8]:
+            count[1][-1] += 1 
+        if answers[idx] == no3[idx%10]: 
+            count[2][-1] += 1
+    # 방법 1         
+    sorted_count = sorted(count, key=lambda x : x[:][-1], reverse=True)
+    # print("sorted : ",  sorted_count)
+    answer.append(sorted_count.pop(0))
+    while sorted_count : 
+        if answer[-1][-1] == sorted_count[0][-1]:
+            answer.append(sorted_count.pop(0))
+        else : break 
+    ans = [ answer[i][0] for i in range(len(answer))]
+
+    # 방법 2 :만약 count = [0,0,0] 으로 잡은 경우라면 sort도 할 필요 없고 아래와 같이 짜면 됨 
+    # for idx, s in enumerate(count): 
+    #     if s == max(count) :
+    #         ans.append(idx+1)
+    return ans    
+``` 
 <!-- ### DFS /BFS  -->
 ### Sort
 1. K 번째 수 : 배열이 주어지고 배열에서 특정i,j 인덱스를 sort 했을 때 k 번째 인덱스 찾기) Lv1 <br>
@@ -217,7 +248,7 @@ publised : true
 
 - 프로그래머스 고득점 kit
     - Hash 4/4 (DONE)
-    - 완전탐색 
+    - 완전탐색 1/3
     - 깊이/너비 우선 탐색 
     - 정렬 3/3 (DONE)
 
