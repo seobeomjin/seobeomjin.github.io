@@ -114,7 +114,7 @@ publised : true
 ``` 
 ### DFS /BFS 
 1. * 타겟 넘버 : numbers로 주어진 배열들의 값을 더하고 빼서, target의 숫자가 나올 수 있는 경우의 수를 return Lv2 <br>
-    ```python 
+```python 
     global count
     def DFS (numbers, target, L, t): 
         global count
@@ -130,12 +130,12 @@ publised : true
         count = 0
         DFS(numbers, target, 0, 0)
         return count
-    ```
+```
 - 트리를 머릿속으로 생각하고, 각 인덱스에 대해 +1과 -1 의 경우가 있으며 이를 재귀적으로 끝까지 탐색하고 온다 생각.
 - 이를 DFS를 통해 풀이. (처음 접하는 문제라 접근법이 쉽지 않아 다른 사람의 풀이를 참고했음)
 
 2. *네트워크 
-    ```python  
+```python  
     def solution(n, computers):
         answer = 0 
         global visit
@@ -159,13 +159,13 @@ publised : true
             for i in range(len(computers[0])): 
                 if computers[com_num][i] == 1 and visit[i] == 0 : 
                     start_list.append(i)
-    ```
+```
 - 방문한 노드를 체크하면서 방문하지 않은 노드들에 대해 DFS를 활용하는 것이 인상깊음. (난 왜 처음에 BFS라고 생각한거지?)
 - <a href = "https://velog.io/@seovalue/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-python"> 참고 </a>
 
 ### Sort
 1. K 번째 수 : 배열이 주어지고 배열에서 특정i,j 인덱스를 sort 했을 때 k 번째 인덱스 찾기) Lv1 <br>
-    ```python 
+```python 
     def solution(array, commands):
         answer = []
         for command in commands :
@@ -177,18 +177,18 @@ publised : true
         cropped = arr[command[0]-1 : command[1]] # 2번째에서 5번째 니까 인덱스 1에서 
         sorted_cropped = sorted(cropped)
         return  sorted_cropped[command[2]-1]
-    ```
+```
 2. 가장 큰 수 : 수들이 차례대로 들어있는 배열이 들어있고 그걸 이어 붙여 만들 수 있는 가장 큰 수 찾기 Lv2 <br>
-    ```python
+```python
     def solution(numbers):
         numbers_str = list(map(str,numbers))
         sorted_numbers_str = sorted(numbers_str, key= lambda x : x*5 ,reverse=True)
         return str(int(''.join(sorted_numbers_str)))
-    ```
+```
     - 첫 글자의 크기(ASCII) 순서대로(오름차순) 2) 글자의 크기가 같다면 그 다음 길이를 체크.<br>
 
 3. H-Index : 주어진 배열에서 h보다 큰 값이 h개 이상 존재하는 h의 최댓값 구하기Lv2 <br>
-    ```python
+```python
     def solution(citations):
         answer = 0
         sorted_citations = sorted(citations)
@@ -202,11 +202,11 @@ publised : true
                     if len(sorted_citations[j:]) >= h : 
                         H_index.append(h)
         return max(H_index)
-    ```
+```
 
 ### Stack / Que 
 1. 주식가격 : 초 단위로 기록된 주식가격에서 가격이 이후 떨어지지 않은지가 몇초가 되는지를 return 하도록 함수를 구성하라. Lv2 <br>
-    ```python 
+```python 
     def Q1_solution(prices): 
         answer = [0] * len(prices)
         for i in range(len(prices)): # 0 - 4
@@ -221,7 +221,7 @@ publised : true
                 break 
         return answer
     # print(Q1_solution([1, 2, 3, 2, 3]))
-    ```
+```
 2. 기능개발 : 앞의 개발이 끝나야 뒤의 개발도 release될 수 있음. Lv2 <br>
     ```python 
     def Q2_solution(progresses, speeds):
@@ -299,7 +299,7 @@ publised : true
 - 프로그래머스 고득점 kit
     - Hash 4/4 (DONE)
     - 완전탐색 1/3
-    - 깊이/너비 우선 탐색 1/4
+    - 깊이/너비 우선 탐색 2/4
     - 정렬 3/3 (DONE)
 
     - Stack/Que 4/4 (DONE)
