@@ -112,7 +112,57 @@ publised : true
     #         ans.append(idx+1)
     return ans    
 ``` 
-<!-- ### DFS /BFS  -->
+### DFS /BFS 
+1. * 타겟 넘버 : numbers로 주어진 배열들의 값을 더하고 빼서, target의 숫자가 나올 수 있는 경우의 수를 return Lv2 <br>
+    ```python 
+    global count
+    def DFS (numbers, target, L, t): 
+        global count
+        if L == len(numbers) :
+            if  target == t : 
+                count +=1
+        else : 
+            DFS(numbers, target, L+1, t+numbers[L])
+            DFS(numbers, target, L+1, t-numbers[L])
+
+    def solution(numbers, target):
+        global count 
+        count = 0
+        DFS(numbers, target, 0, 0)
+        return count
+    ```
+- 트리를 머릿속으로 생각하고, 각 인덱스에 대해 +1과 -1 의 경우가 있으며 이를 재귀적으로 끝까지 탐색하고 온다 생각.
+- 이를 DFS를 통해 풀이. (처음 접하는 문제라 접근법이 쉽지 않아 다른 사람의 풀이를 참고했음)
+
+2. *네트워크 
+    ```python  
+    def solution(n, computers):
+        answer = 0 
+        global visit
+        visit = [0 for i in range(n)]
+        idx = 0 
+        while 0 in visit : 
+            if visit[idx] == 0 : 
+                DFS(computers, idx)
+                answer += 1 
+            idx +=1
+        return answer 
+
+    def DFS(computers, start): 
+        global visit
+        start_list = [start]
+        
+        while start_list : 
+            com_num = start_list.pop(0)
+            if visit[com_num] == 0 : 
+                visit[com_num] = 1 
+            for i in range(len(computers[0])): 
+                if computers[com_num][i] == 1 and visit[i] == 0 : 
+                    start_list.append(i)
+    ```
+- 방문한 노드를 체크하면서 방문하지 않은 노드들에 대해 DFS를 활용하는 것이 인상깊음. (난 왜 처음에 BFS라고 생각한거지?)
+- <a href = "https://velog.io/@seovalue/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-python"> 참고 </a>
+
 ### Sort
 1. K 번째 수 : 배열이 주어지고 배열에서 특정i,j 인덱스를 sort 했을 때 k 번째 인덱스 찾기) Lv1 <br>
     ```python 
@@ -249,7 +299,7 @@ publised : true
 - 프로그래머스 고득점 kit
     - Hash 4/4 (DONE)
     - 완전탐색 1/3
-    - 깊이/너비 우선 탐색 
+    - 깊이/너비 우선 탐색 1/4
     - 정렬 3/3 (DONE)
 
     - Stack/Que 4/4 (DONE)
