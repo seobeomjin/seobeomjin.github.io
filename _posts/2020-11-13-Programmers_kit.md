@@ -112,6 +112,7 @@ publised : true
     #         ans.append(idx+1)
     return ans    
 ``` 
+
 ### DFS /BFS 
 1. * 타겟 넘버 : numbers로 주어진 배열들의 값을 더하고 빼서, target의 숫자가 나올 수 있는 경우의 수를 return Lv2<br>
 ```python 
@@ -133,7 +134,7 @@ publised : true
 ```
 - 트리를 머릿속으로 생각하고, 각 인덱스에 대해 +1과 -1 의 경우가 있으며 이를 재귀적으로 끝까지 탐색하고 온다 생각.
 - 이를 DFS를 통해 풀이. (처음 접하는 문제라 접근법이 쉽지 않아 다른 사람의 풀이를 참고했음)
-
+<br>
 2. *네트워크 
 ```python  
     def solution(n, computers):
@@ -185,8 +186,8 @@ publised : true
         sorted_numbers_str = sorted(numbers_str, key= lambda x : x*5 ,reverse=True)
         return str(int(''.join(sorted_numbers_str)))
 ```
-    - 첫 글자의 크기(ASCII) 순서대로(오름차순) 2) 글자의 크기가 같다면 그 다음 길이를 체크.<br>
-
+    - 첫 글자의 크기(ASCII) 순서대로(오름차순) 2) 글자의 크기가 같다면 그 다음 길이를 체크. <br>
+<br>
 3. H-Index : 주어진 배열에서 h보다 큰 값이 h개 이상 존재하는 h의 최댓값 구하기Lv2 <br>
 ```python
     def solution(citations):
