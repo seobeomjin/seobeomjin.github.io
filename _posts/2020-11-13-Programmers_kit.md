@@ -43,7 +43,7 @@ publised : true
     return whole-1
 ```
 4. 베스트 앨범 : 장르별로 가장 많이 재생된 곡들을 상위 두곡씩 뽑아 베스트앨범 구성 Lv3 <br>
-    ```python 
+```python 
     def Q4_solution(genres, plays):
         answer = []
         d = {e:[] for e in set(genres)}
@@ -76,7 +76,7 @@ publised : true
     >>> list(filter(lambda x: x < 5, range(10))) # 파이썬 2 및 파이썬 3
     >>> [0, 1, 2, 3, 4]
     # 참의 값만 통과시켜 내줌
-    ```
+```
 
 
 
@@ -113,7 +113,7 @@ publised : true
     return ans    
 ``` 
 ### DFS /BFS 
-1. * 타겟 넘버 : numbers로 주어진 배열들의 값을 더하고 빼서, target의 숫자가 나올 수 있는 경우의 수를 return Lv2 <br>
+1. * 타겟 넘버 : numbers로 주어진 배열들의 값을 더하고 빼서, target의 숫자가 나올 수 있는 경우의 수를 return Lv2<br>
 ```python 
     global count
     def DFS (numbers, target, L, t): 
@@ -309,3 +309,6 @@ publised : true
     - 탐욕법 
     - 이분탐색
     - 그래프
+
+
+```
