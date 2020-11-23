@@ -114,7 +114,7 @@ publised : true
 ``` 
 
 ### DFS /BFS 
-1. * 타겟 넘버 : numbers로 주어진 배열들의 값을 더하고 빼서, target의 숫자가 나올 수 있는 경우의 수를 return Lv2<br>
+1. ★타겟 넘버 : numbers로 주어진 배열들의 값을 더하고 빼서, target의 숫자가 나올 수 있는 경우의 수를 return Lv2<br>
 ```python 
     global count
     def DFS (numbers, target, L, t): 
@@ -133,9 +133,8 @@ publised : true
         return count
 ```
 - 트리를 머릿속으로 생각하고, 각 인덱스에 대해 +1과 -1 의 경우가 있으며 이를 재귀적으로 끝까지 탐색하고 온다 생각.
-- 이를 DFS를 통해 풀이. (처음 접하는 문제라 접근법이 쉽지 않아 다른 사람의 풀이를 참고했음)
-<br>
-2. *네트워크 
+- 이를 DFS를 통해 풀이. (처음 접하는 문제라 접근법이 쉽지 않아 다른 사람의 풀이를 참고했음)<br>
+2. ★네트워크 
 ```python  
     def solution(n, computers):
         answer = 0 
@@ -313,3 +312,4 @@ publised : true
 
 
 ```
+
