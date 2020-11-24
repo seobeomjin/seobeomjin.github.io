@@ -7,8 +7,9 @@ published : true
 ---
 
 ## HackerRank Interview  Preparation Kit 
+<br>
 
-### Warm-up Challenges 
+<!-- ### Warm-up Challenges 
 1. Sales by Match : make them as a pair and then count them how many pairs there are / easy / 7min  
 ```python 
     import collections 
@@ -64,7 +65,7 @@ published : true
         for i in range(n%s_len) : 
             if s[i] == 'a': total_count +=1 
         return total_count 
-```
+``` -->
 
 ### Arrays 
 1. 2D Array - DS : access to each index of 2D array and then get biggest sum value / easy / 14min 
@@ -104,8 +105,7 @@ published : true
         ... 
 ```
 
-3. ★New Year Chaos / Medium / But It is so ,, complicated for me ★
-    - 한 사람당 2회씩 뇌물을 주어 줄을 선 것을 바꿀 수 있음. 해당 줄에서 총 뇌물을 교환한 횟수는? 
+3. ★New Year Chaos / 한 사람당 2회씩 뇌물을 주어 줄을 선 것을 바꿀 수 있음. 해당 줄에서 총 뇌물을 교환한 횟수는? / Medium / But It is so ,, complicated for me ★
 ```python 
     def minimumBribes(q):
         # bubble sort ?
@@ -133,7 +133,7 @@ published : true
         print(count)
         return
 
-    # 다른 풀이 
+    ###### 다른 풀이 
     def minimumBribes(Q):
     # initialize the number of moves
     moves = 0 
@@ -160,17 +160,17 @@ published : true
         # In other words we will look from P-1 to i-1, which in Python is range(P-1,i-1+1), or simply
         # range(P-1,i).  To make sure we don't try an index less than zero, replace P-1 with max(P-1,0)
 ```
-    <어려웠던 점> <br>
-        1. 일단 문제 해석이 너무 난해했음. <br>
-        2. sort를 할 생각을 왜 못했는지. 반성. Array라는 것에 갖혀 너무 쉽게 생각했음. <br>
-            >>> 문제의 틀에 갖히지 말 것.<br>
-        3. 직접 sort를 할 필요없이 swap된 횟수만을 계산하면 complexity를 낮출 수 있음. <br>
-            >>> 하지만 코드 이해를 잘 못했다. 이거 할 것. <br>
-
+<어려웠던 점> <br>
+    1. 일단 문제 해석이 너무 난해했음. <br>
+    2. sort를 할 생각을 왜 못했는지. 반성. Array라는 것에 갖혀 너무 쉽게 생각했음. <br>
+        >>> 문제의 틀에 갖히지 말 것.<br>
+    3. 직접 sort를 할 필요없이 swap된 횟수만을 계산하면 complexity를 낮출 수 있음. <br>
+        >>> 하지만 코드 이해를 잘 못했다. 이거 할 것. <br>
+<br>
 
 4. ★Minimum Swaps 2 / 임의의 두 원소를 최소 swap하여 오름차순으로 만드는 것 / Medium 
-    - 첫 번쨰 풀이 : 선택 정렬로 풀었는데, Time limit exceeded 문구가 떴음. (12min)
-    - 포인트는 선택한 아이템을 원래 있어야 하는 자리로 보내면서 소팅하는 것임 
+- 첫 번쨰 풀이 : 선택 정렬로 풀었는데, Time limit exceeded 문구가 떴음. (12min)
+- 포인트는 선택한 아이템을 원래 있어야 하는 자리로 보내면서 소팅하는 것임 
 ```python 
 # Time limit exceeded ..!  12min 
 # selection sort
@@ -192,8 +192,8 @@ def minimumSwaps(arr):
                 continue
     return cnt
 ```
-    - 두 번째 풀이 <a href = "https://somjang.tistory.com/entry/HackerRank-Array-Minimum-Swaps-2-Python"> 참고 </a>
-    - 포인트는, 해당 인덱스가 있어야 하는 자리에 위치해 있지 않을 때, 그 값을 바꿔야 하는 자리에 가져다 놓음으로써 해결할 수 있었음. 
+- 두 번째 풀이 <a href = "https://somjang.tistory.com/entry/HackerRank-Array-Minimum-Swaps-2-Python"> 참고 </a>
+- 포인트는, 해당 인덱스가 있어야 하는 자리에 위치해 있지 않을 때, 그 값을 바꿔야 하는 자리에 가져다 놓음으로써 해결할 수 있었음. 
 ```python 
     def minimumSwaps(arr):
         tmp = 0
@@ -251,7 +251,7 @@ def minimumSwaps(arr):
                 idx+=1
         return count 
 
-## 다른 솔루션 
+###### 다른 솔루션 
     from collections import Counter
     def count_anagrams(string):
         buckets = {}
@@ -266,8 +266,8 @@ def minimumSwaps(arr):
 ```
 
 4. ★★★Count Triplets / a,ar,arr 의 값이 순차적으로 배치된 것의 갯수를 찾는 문제  / Medium /
-    - a,ar,arr이 index또한 순서대로 구성되어 있어야 했기 때문에 뒤에서 부터 내려오면서 찾았던 것이 포인트임. 
-    - dict을 두개를 사용하여 하나는 count를 세고, 하나는 새로운 pairdict을 만들어 pairdict에 들어있는 경우를 count함 
+- a,ar,arr이 index또한 순서대로 구성되어 있어야 했기 때문에 뒤에서 부터 내려오면서 찾았던 것이 포인트임. 
+- dict을 두개를 사용하여 하나는 count를 세고, 하나는 새로운 pairdict을 만들어 pairdict에 들어있는 경우를 count함 
 ```python 
 # 1. Terminated due to timeout :(    7/13 correct 
     def countTriplets(arr, r):
@@ -354,8 +354,8 @@ def minimumSwaps(arr):
 ```
 
 2. Sherlock and the Valid String / easy / 7min 
- to change it into a string such that there are no matching adjacent characters.
- to find the minimum number of required deletions.
+- to change it into a string such that there are no matching adjacent characters.
+- to find the minimum number of required deletions.
  ```python 
     def alternatingCharacters(s):
         s = list(s)
@@ -415,9 +415,9 @@ print(isValid("aaaaabc"))
  ```
 
  4. ★★★ Special String Again / 스트링의 서브스트링 중 연속적으로 대칭적으로 생긴 스트링을 세는 문제. / Medium (Time complexity 개선하는 게 어려웠음.)
-    - common substring 구하는 문제인 듯. (하지만 longest가 아니고 모든 case )
-    - https://en.wikipedia.org/wiki/Longest_common_substring_problem
-    - 이렇게 구성하면 O(N*logN) N으로 겉에 한 번 돌고, 그 다음에는 range(i+1,n)으로 돌기 때문에 
+- common substring 구하는 문제인 듯. (하지만 longest가 아니고 모든 case )
+- https://en.wikipedia.org/wiki/Longest_common_substring_problem
+- 이렇게 구성하면 O(N*logN) N으로 겉에 한 번 돌고, 그 다음에는 range(i+1,n)으로 돌기 때문에 
  ```python 
     def substrCount(n, s):
     count = len(s) # 초기길이 
@@ -461,7 +461,7 @@ print(isValid("aaaaabc"))
                     break 
     return count
  ```
-5. ★★★★Common Child / 두 개의 스트링이 주어졌을 때 연속X,순차적 둘다 존재하는 문자들의 최대개수 세기 / Medium (방법조차 떠오르지 않았음->DP문제) / 
+5. ★★★★Common Child / 두 개의 스트링이 주어졌을 때 연속X,순차적 둘다 존재하는 문자들의 최대개수 세기 / Medium (방법조차 떠오르지 않았음->DP문제)
 - https://en.wikipedia.org/wiki/Longest_common_subsequence_problem
 - The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences). 
 ```python 
@@ -544,13 +544,11 @@ print(isValid("aaaaabc"))
     data = sorted(data, key=cmp_to_key(Player.comparator))
     for i in data:
         print(i.name, i.score)
-
 ```
 4. ★★Fraudulent Activity Notifications / 지출 인덱스에서 trailing day d일 이후 사기 경고 문자가 전송되는 횟수를 계산하는 문제 
-    - d일 바로 이전까지의 지출내역들 중 median*2 <= expenditure[d]이면 경고문자 발송 
-    - 역시 관건은 time complexity 
-    - counting sort를 사용해서 푸는 문제인데 다시 들여다 봐야함 .
-
+- d일 바로 이전까지의 지출내역들 중 median*2 <= expenditure[d]이면 경고문자 발송 
+- 역시 관건은 time complexity 
+- counting sort를 사용해서 푸는 문제인데 다시 들여다 봐야함 .
 ```python 
     def activityNotifications(expenditure, d):
         if len(expenditure) <= d : 
@@ -597,7 +595,7 @@ print(isValid("aaaaabc"))
             data.remove(min(data))
         return count
 
-    # 다른 사람 풀이 
+    ##### 다른 사람 풀이 
     def get_limit(f,d):
         count = 0 
         m1,m2 = (d//2,d//2+1)
@@ -629,7 +627,6 @@ print(isValid("aaaaabc"))
     # 총 expenditure가 0~200이라는 것을 이용하여 모든 expenditure를 인덱스로 만들어 0을 채운 뒤 하나씩 이동할 때마다 1로 바꿔줬음
 ```
 
-
 ### Greedy Algorithms 
 1. Minimum Absolute Difference in an Array / 주어진 배열에서 임의의 두 값을 골라 계산될 수 있는 최소 절댓값을 찾아라. / easy 
 ```python 
@@ -646,13 +643,13 @@ print(isValid("aaaaabc"))
                     bucket.append(abs(sorted_arr[i]-sorted_arr[i+1]))
         return bucket[0] 
 
-# another solution 
+##### another solution 
     n,a = input(),sorted(map(int, input().split()))
     print(min(abs(x-y) for x,y in zip(a,a[1:])))
 ```
 ### Search
 1. ★★★Hash Tables: Ice Cream Parlor / 아이스크림 가게에서 주어진 예산에 맞게 사 먹을 수 있는 2가지 아이스크림의 인덱스 추출 / Medium / 
-    - Counter로 counting 이후 , 아이템들을 set에 넣고 (set에 넣으면 sort되며 들어감) / 그걸을 초기 arr에서 찾아서 index yield해준다. 
+- Counter로 counting 이후 , 아이템들을 set에 넣고 (set에 넣으면 sort되며 들어감) / 그걸을 초기 arr에서 찾아서 index yield해준다. 
 ```python 
     from collections import Counter 
     def whatFlavors(arr, money):
@@ -671,7 +668,6 @@ print(isValid("aaaaabc"))
                 # return과 유사한데 generator로 계속 iter된다고 생각하면 됨 
                 
     print(*whatFlavors([7, 2, 5, 4, 11], 12))
-
 ```
 
 
