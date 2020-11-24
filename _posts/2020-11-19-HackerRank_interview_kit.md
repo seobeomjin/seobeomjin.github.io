@@ -169,10 +169,9 @@ published : true
 <br>
 
 4. ★Minimum Swaps 2 / 임의의 두 원소를 최소 swap하여 오름차순으로 만드는 것 / Medium <br>
-- 첫 번쨰 풀이 : 선택 정렬로 풀었는데, Time limit exceeded 문구가 떴음. (12min) <br>
-- 포인트는 선택한 아이템을 원래 있어야 하는 자리로 보내면서 소팅하는 것임 <br><br>
 ```python
-### Time limit exceeded ..!  12min 
+    # 첫 번쨰 풀이 : 선택 정렬로 풀었는데, Time limit exceeded 문구가 떴음. (12min) 
+    ### Time limit exceeded ..!  12min 
 # selection sort
 def minimumSwaps(arr):
     idx =0 
@@ -192,10 +191,9 @@ def minimumSwaps(arr):
                 continue
     return cnt
 ```
-<br>
+- 포인트는 선택한 아이템을 원래 있어야 하는 자리로 보내면서 소팅하는 것임 <br><br>
 - 두 번째 풀이 <a href = "https://somjang.tistory.com/entry/HackerRank-Array-Minimum-Swaps-2-Python"> 참고 </a> <br>
 - 포인트는, 해당 인덱스가 있어야 하는 자리에 위치해 있지 않을 때, 그 값을 바꿔야 하는 자리에 가져다 놓음으로써 해결할 수 있었음. <br>
-
 ```python 
     def minimumSwaps(arr):
         tmp = 0
@@ -235,7 +233,6 @@ def minimumSwaps(arr):
 ```
 
 3. ★Sherlock and Anagrams / 스트링에서 서브스트링의 "순차적인" 구성을 통해서 만들 수 있는 anagram(재배열된 서브스트링)의 갯수/ Medium <br>
-- 왜 아이디어가 잘 안 떠오를까... 효율적인... <br>
 ```python 
     import collections
     def sherlockAndAnagrams(s):
@@ -252,6 +249,7 @@ def minimumSwaps(arr):
                     else : continue
                 idx+=1
         return count 
+
 ############ 다른 솔루션 
     from collections import Counter
     def count_anagrams(string):
@@ -265,10 +263,9 @@ def minimumSwaps(arr):
             count += buckets[key] * (buckets[key]-1) // 2
         return count
 ```
+- 왜 아이디어가 잘 안 떠오를까... 효율적인... 
 
 4. ★★★Count Triplets / a,ar,arr 의 값이 순차적으로 배치된 것의 갯수를 찾는 문제  / Medium / <br>
-- a,ar,arr이 index또한 순서대로 구성되어 있어야 했기 때문에 뒤에서 부터 내려오면서 찾았던 것이 포인트임.  <br>
-- dict을 두개를 사용하여 하나는 count를 세고, 하나는 새로운 pairdict을 만들어 pairdict에 들어있는 경우를 count함  <br><br>
 ```python 
 # 1. Terminated due to timeout :(    7/13 correct 
     def countTriplets(arr, r):
@@ -287,7 +284,7 @@ def minimumSwaps(arr):
                                 count += 1 
     return count 
     # for 문을 이렇게 돌려서는 못 찾는다.
-
+#### another solution 
     def countTriplets(arr, r):
     count_dict = {}
     pair_dict = {}
@@ -301,6 +298,8 @@ def minimumSwaps(arr):
         count_dict[i] = count_dict.get(i,0) +1 # 매번 아이템을 카운트해주며 추가  
     return count
 ```
+- a,ar,arr이 index또한 순서대로 구성되어 있어야 했기 때문에 뒤에서 부터 내려오면서 찾았던 것이 포인트임.  <br>
+- dict을 두개를 사용하여 하나는 count를 세고, 하나는 새로운 pairdict을 만들어 pairdict에 들어있는 경우를 count함  <br>
 
 5. Frequency Queries / 주어진 operation들로 (1-삽입, 2-있으면 삭제, 3-값확인, bool반환) 반환된bool값의 출력을 구하라 <br>
 ```python 
@@ -356,9 +355,6 @@ def minimumSwaps(arr):
 ```
 
 2. Sherlock and the Valid String / easy / 7min <br>
-- to change it into a string such that there are no matching adjacent characters.<br>
-- to find the minimum number of required deletions.<br>
-
 ```python 
     def alternatingCharacters(s):
         s = list(s)
@@ -374,9 +370,10 @@ def minimumSwaps(arr):
                 else : stack.append(i)
         return cnt
 ```
+- to change it into a string such that there are no matching adjacent characters.<br>
+- to find the minimum number of required deletions.<br>
 
- 3.  Sherlock and the Valid String / 문자열이 주어졌을 때 한가지의 문자를 삭제하여 모든 문자들이 동일한 갯수를 만들 수 있는가 / Medium / 쉬운 문제 였는데 오래 걸림.아오.<br>
-
+ 3.  Sherlock and the Valid String / 문자열이 주어졌을 때 한가지의 문자를 삭제하여 모든 문자들이 동일한 갯수를 만들 수 있는가 / Medium / 쉬운 문제 였는데 오래 걸림<br>
 ```python 
     from collections import Counter
     def isValid(s):
@@ -419,9 +416,6 @@ print(isValid("aaaaabc"))
 ```
 
  4. ★★★ Special String Again / 스트링의 서브스트링 중 연속적으로 대칭적으로 생긴 스트링을 세는 문제. / Medium (Time complexity 개선하는 게 어려웠음.)<br>
-- common substring 구하는 문제인 듯. (하지만 longest가 아니고 모든 case )<br>
-- https://en.wikipedia.org/wiki/Longest_common_substring_problem<br>
-- 이렇게 구성하면 O(N*logN) N으로 겉에 한 번 돌고, 그 다음에는 range(i+1,n)으로 돌기 때문에 <br>
 ```python 
     def substrCount(n, s):
     count = len(s) # 초기길이 
@@ -465,9 +459,11 @@ print(isValid("aaaaabc"))
                     break 
     return count
 ```
+- common substring 구하는 문제인 듯. (하지만 longest가 아니고 모든 case )<br>
+- https://en.wikipedia.org/wiki/Longest_common_substring_problem<br>
+- 이렇게 구성하면 O(N*logN) N으로 겉에 한 번 돌고, 그 다음에는 range(i+1,n)으로 돌기 때문에 <br>
+
 5. ★★★★Common Child / 두 개의 스트링이 주어졌을 때 연속X,순차적 둘다 존재하는 문자들의 최대개수 세기 / Medium (방법조차 떠오르지 않았음->DP문제)<br>
-- https://en.wikipedia.org/wiki/Longest_common_subsequence_problem<br>
-- The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences). <br>
 ```python 
     # dynamic programming 으로 풀었는데, Terminated due to timeout 뜸 , 9/15 correct  / -> pypy3에서 돌리니까 통과됨
     def commonChild(s1, s2):
@@ -481,7 +477,8 @@ print(isValid("aaaaabc"))
                     arr[row+1][col+1] = max(arr[row][col+1], arr[row+1][col])
         return arr[-1][-1]
 ```
-
+- https://en.wikipedia.org/wiki/Longest_common_subsequence_problem<br>
+- The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences). <br>
 
 ### Sorting 
 1. Sorting: Bubble Sort / easy / 13min <br>
@@ -550,9 +547,6 @@ print(isValid("aaaaabc"))
         print(i.name, i.score)
 ```
 4. ★★Fraudulent Activity Notifications / 지출 인덱스에서 trailing day d일 이후 사기 경고 문자가 전송되는 횟수를 계산하는 문제 <br>
-- d일 바로 이전까지의 지출내역들 중 median*2 <= expenditure[d]이면 경고문자 발송 <br>
-- 역시 관건은 time complexity <br>
-- counting sort를 사용해서 푸는 문제인데 다시 들여다 봐야함 .<br>
 ```python 
     def activityNotifications(expenditure, d):
         if len(expenditure) <= d : 
@@ -630,6 +624,9 @@ print(isValid("aaaaabc"))
     print(activityNotifications(e, n, d))
     # 총 expenditure가 0~200이라는 것을 이용하여 모든 expenditure를 인덱스로 만들어 0을 채운 뒤 하나씩 이동할 때마다 1로 바꿔줬음
 ```
+- d일 바로 이전까지의 지출내역들 중 median*2 <= expenditure[d]이면 경고문자 발송 <br>
+- 역시 관건은 time complexity <br>
+- counting sort를 사용해서 푸는 문제인데 다시 들여다 봐야함 .<br>
 
 ### Greedy Algorithms 
 1. Minimum Absolute Difference in an Array / 주어진 배열에서 임의의 두 값을 골라 계산될 수 있는 최소 절댓값을 찾아라. / easy <br>
@@ -653,7 +650,6 @@ print(isValid("aaaaabc"))
 ```
 ### Search
 1. ★★★Hash Tables: Ice Cream Parlor / 아이스크림 가게에서 주어진 예산에 맞게 사 먹을 수 있는 2가지 아이스크림의 인덱스 추출 / Medium / <br>
-- Counter로 counting 이후 , 아이템들을 set에 넣고 (set에 넣으면 sort되며 들어감) / 그걸을 초기 arr에서 찾아서 index yield해준다. <br>
 ```python 
     from collections import Counter 
     def whatFlavors(arr, money):
@@ -673,6 +669,25 @@ print(isValid("aaaaabc"))
                 
     print(*whatFlavors([7, 2, 5, 4, 11], 12))
 ```
+- Counter로 counting 이후 , 아이템들을 set에 넣고 (set에 넣으면 sort되며 들어감) / 그걸을 초기 arr에서 찾아서 index yield해준다. <br>
 
+
+- Interview kit
+    - Arrays (4/5)
+    
+    - Dict and Hashmaps (5/5) (solved all)
+    - String Manipulation (5/5) (solved all)
+    - Sorting (3/5)
+    
+    - Greedy Algorithms (1/5)
+    - Search (1/5)
+    - Dynamic Programming (0/4)
+
+    - Stacks and Queues 
+    - Graphs 
+    - Trees 
+    - Linked Lists 
+    - Recursion and Backtracking 
+    - Miscellaneous
 
 
