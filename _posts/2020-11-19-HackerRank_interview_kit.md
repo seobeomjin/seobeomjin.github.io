@@ -232,8 +232,8 @@ def minimumSwaps(arr):
     else : return "NO"
 ```
 
-3. ★Sherlock and Anagrams / 스트링에서 서브스트링의 "순차적인" 구성을 통해서 만들 수 있는 anagram(재배열된 서브스트링)의 갯수/ Medium <br>
-```python 
+3. ★Sherlock and Anagrams / 스트링에서 서브스트링의 "순차적인" 구성을 통해서 만들 수 있는 anagram(재배열된 서브스트링)의 갯수/ Medium
+```python
     import collections
     def sherlockAndAnagrams(s):
         count = 0 
@@ -249,8 +249,7 @@ def minimumSwaps(arr):
                     else : continue
                 idx+=1
         return count 
-
-############ 다른 솔루션 
+    ############ 다른 솔루션 
     from collections import Counter
     def count_anagrams(string):
         buckets = {}
@@ -265,9 +264,10 @@ def minimumSwaps(arr):
 ```
 - 왜 아이디어가 잘 안 떠오를까... 효율적인... 
 
-4. ★★★Count Triplets / a,ar,arr 의 값이 순차적으로 배치된 것의 갯수를 찾는 문제  / Medium / <br>
+4. ★★★Count Triplets / a,ar,arr 의 값이 순차적으로 배치된 것의 갯수를 찾는 문제 / Medium 
 ```python 
-# 1. Terminated due to timeout :(    7/13 correct 
+    # 1. Terminated due to timeout :(    7/13 correct 
+    # for 문을 이렇게 돌려서는 못 찾는다.
     def countTriplets(arr, r):
     count = 0 
     case_dict = {}
@@ -283,8 +283,8 @@ def minimumSwaps(arr):
                             if j<p : 
                                 count += 1 
     return count 
-    # for 문을 이렇게 돌려서는 못 찾는다.
-#### another solution 
+    ####################################################### 
+    # 2. another solution 
     def countTriplets(arr, r):
     count_dict = {}
     pair_dict = {}
@@ -301,7 +301,7 @@ def minimumSwaps(arr):
 - a,ar,arr이 index또한 순서대로 구성되어 있어야 했기 때문에 뒤에서 부터 내려오면서 찾았던 것이 포인트임.  <br>
 - dict을 두개를 사용하여 하나는 count를 세고, 하나는 새로운 pairdict을 만들어 pairdict에 들어있는 경우를 count함  <br>
 
-5. Frequency Queries / 주어진 operation들로 (1-삽입, 2-있으면 삭제, 3-값확인, bool반환) 반환된bool값의 출력을 구하라 <br>
+5. Frequency Queries / 주어진 operation들로 (1-삽입, 2-있으면 삭제, 3-값확인, bool반환) 반환된bool값의 출력을 구하라
 ```python 
     # Terminated due to timeout :(    14/15 CORRECT
     def freqQuery(queries):
@@ -338,7 +338,7 @@ def minimumSwaps(arr):
 ```
 
 ### String Manipulation 
-1. Strings: Making Anagrams / easy / 22min <br>
+1. Strings: Making Anagrams / easy / 22min
 ```python 
     from collections  import Counter
     def makeAnagram(a, b):
@@ -396,7 +396,7 @@ def minimumSwaps(arr):
             else : return "NO"
         else : return "NO" 
 
-########### 다른 코드 : 같은 방법인데, key1 , key2를 왜 저렇게 받을 생각을 못했냐 
+    ########### 다른 코드 : 같은 방법인데, key1 , key2를 왜 저렇게 받을 생각을 못했냐 
         ,,,
         elif len(string.values())==2:
             key1,key2=string.keys()
@@ -409,10 +409,10 @@ def minimumSwaps(arr):
         else:
             print("NO")
 
-print(isValid("aaaabbcc"))
-print(isValid("abcdefghhgfedecba"))
-print(isValid("ibfdgaeadiaefgbhbdghhhbgdfgeiccbiehhfcggchgghadhdhagfbahhddgghbdehidbibaeaagaeeigffcebfbaieggabcfbiiedcabfihchdfabifahcbhagccbdfifhghcadfiadeeaheeddddiecaicbgigccageicehfdhdgafaddhffadigfhhcaedcedecafeacbdacgfgfeeibgaiffdehigebhhehiaahfidibccdcdagifgaihacihadecgifihbebffebdfbchbgigeccahgihbcbcaggebaaafgfedbfgagfediddghdgbgehhhifhgcedechahidcbchebheihaadbbbiaiccededchdagfhccfdefigfibifabeiaccghcegfbcghaefifbachebaacbhbfgfddeceababbacgffbagidebeadfihaefefegbghgddbbgddeehgfbhafbccidebgehifafgbghafacgfdccgifdcbbbidfifhdaibgigebigaedeaaiadegfefbhacgddhchgcbgcaeaieiegiffchbgbebgbehbbfcebciiagacaiechdigbgbghefcahgbhfibhedaeeiffebdiabcifgccdefabccdghehfibfiifdaicfedagahhdcbhbicdgibgcedieihcichadgchgbdcdagaihebbabhibcihicadgadfcihdheefbhffiageddhgahaidfdhhdbgciiaciegchiiebfbcbhaeagccfhbfhaddagnfieihghfbaggiffbbfbecgaiiidccdceadbbdfgigibgcgchafccdchgifdeieicbaididhfcfdedbhaadedfageigfdehgcdaecaebebebfcieaecfagfdieaefdiedbcadchabhebgehiidfcgahcdhcdhgchhiiheffiifeegcfdgbdeffhgeghdfhbfbifgidcafbfcd"))
-print(isValid("aaaaabc"))
+    print(isValid("aaaabbcc"))
+    print(isValid("abcdefghhgfedecba"))
+    print(isValid("ibfdgaeadiaefgbhbdghhhbgdfgeiccbiehhfcggchgghadhdhagfbahhddgghbdehidbibaeaagaeeigffcebfbaieggabcfbiiedcabfihchdfabifahcbhagccbdfifhghcadfiadeeaheeddddiecaicbgigccageicehfdhdgafaddhffadigfhhcaedcedecafeacbdacgfgfeeibgaiffdehigebhhehiaahfidibccdcdagifgaihacihadecgifihbebffebdfbchbgigeccahgihbcbcaggebaaafgfedbfgagfediddghdgbgehhhifhgcedechahidcbchebheihaadbbbiaiccededchdagfhccfdefigfibifabeiaccghcegfbcghaefifbachebaacbhbfgfddeceababbacgffbagidebeadfihaefefegbghgddbbgddeehgfbhafbccidebgehifafgbghafacgfdccgifdcbbbidfifhdaibgigebigaedeaaiadegfefbhacgddhchgcbgcaeaieiegiffchbgbebgbehbbfcebciiagacaiechdigbgbghefcahgbhfibhedaeeiffebdiabcifgccdefabccdghehfibfiifdaicfedagahhdcbhbicdgibgcedieihcichadgchgbdcdagaihebbabhibcihicadgadfcihdheefbhffiageddhgahaidfdhhdbgciiaciegchiiebfbcbhaeagccfhbfhaddagnfieihghfbaggiffbbfbecgaiiidccdceadbbdfgigibgcgchafccdchgifdeieicbaididhfcfdedbhaadedfageigfdehgcdaecaebebebfcieaecfagfdieaefdiedbcadchabhebgehiidfcgahcdhcdhgchhiiheffiifeegcfdgbdeffhgeghdfhbfbifgidcafbfcd"))
+    print(isValid("aaaaabc"))
 ```
 
  4. ★★★ Special String Again / 스트링의 서브스트링 중 연속적으로 대칭적으로 생긴 스트링을 세는 문제. / Medium (Time complexity 개선하는 게 어려웠음.)<br>
@@ -644,7 +644,7 @@ print(isValid("aaaaabc"))
                     bucket.append(abs(sorted_arr[i]-sorted_arr[i+1]))
         return bucket[0] 
 
-##### another solution 
+    ##### another solution 
     n,a = input(),sorted(map(int, input().split()))
     print(min(abs(x-y) for x,y in zip(a,a[1:])))
 ```
