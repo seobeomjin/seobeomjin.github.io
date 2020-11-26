@@ -43,13 +43,11 @@ publised : true
 ```
 
 #### Lesson 4 Counting Elements
--  ★ MaxCounters / N 사이에 값이 있으면 +1 , N+1이 값이면 max로 모든 counter값을 수정 / Medium (문제는 쉽지만 complexity 문제)/ 
+- ★ MaxCounters / N 사이에 값이 있으면 +1 , N+1이 값이면 max로 모든 counter값을 수정 / Medium (문제는 쉽지만 complexity 문제) <br>
 ```python
     # Detected time complexity: O(N + M) / 100% 
     def MaxCounters(N, A):
-    """
-    * max를 매번 계산하지 않는 것이 포인트 였을까?
-    """
+        # * max를 매번 계산하지 않는 것이 포인트 였을까?
         oper = [0]*N
         was_last_max = False
         max_val = 0
@@ -191,8 +189,8 @@ publised : true
             elif P[j] <= G[Q[j]] and G[Q[j]] <= Q[j] : 
                 ans[j] = 3
         return ans
-
 ```
+<br>
 - prefix sum 개념을 적용해야 time complexity를 만족하며 값을 이룰 수 있음 <br>
     prefix summation 알고리즘은, 부분합(인덱스의 특정 부분)에 주로 사용되는 방법으로, 인덱스를 증가시킬 때마다 매 state의 sum을 구하고<br>
     특정 부분의 sum에서 다른 특정 부분의 sum까지 빼주는 방식으로 구성됨. <br>

@@ -6,6 +6,7 @@ title: Archives
 <div class="post">
 	<h1 class="pageTitle">  </h1>
 	<h1 class="pageTitle"> Algorithm </h1>
+		<li><a href="https://seobeomjin.github.io/blog/Codility_lessons/" target = "_blank"> <b> Codility_lessons 문제풀이 요약 </b></a>, 25/11/2020 </li>
 		<li><a href="https://seobeomjin.github.io/blog/HackerRank_interview_kit/" target = "_blank"> <b> HackerRank Interview kit 문제풀이 요약 </b></a>, 19/11/2020 </li>
 		<li><a href="https://seobeomjin.github.io/blog/Programmers_kit/" target = "_blank"> <b> Programmers 코딩테스트 kit 문제풀이 요약 </b></a>, 13/11/2020 </li>
 	<h1 class="pageTitle"> Paper Review </h1>
