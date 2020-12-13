@@ -10,7 +10,7 @@ title: Archives
 		<li><a href="https://seobeomjin.github.io/blog/HackerRank_interview_kit/" target = "_blank"> <b> Algorithm : HackerRank Interview kit 문제풀이 요약 </b></a>, 19/11/2020 </li>
 		<li><a href="https://seobeomjin.github.io/blog/Programmers_kit/" target = "_blank"> <b> Algorithm : Programmers 코딩테스트 kit 문제풀이 요약 </b></a>, 13/11/2020 </li>
 		<li><a href="https://seobeomjin.github.io/blog/ABN/" target = "_blank"> <b> Paper Review : Attention Branch Network 리뷰 </b></a>, 08/11/2020 </li>
-		<li><a href="https://seobeomjin.github.io/blog/read_paper/" target = "_blank"> <b> Record of read papers </b></a>, 13/10/2020 </li>
+		<!-- <li><a href="https://seobeomjin.github.io/blog/read_paper/" target = "_blank"> <b> Record of read papers </b></a>, 13/10/2020 </li> -->
 		<li><a href="https://seobeomjin.github.io/blog/SCFP/" target = "_blank"> <b> Paper Review : Convolutional neural network based on SMILES representation of compounds for detecting chemical motif 리뷰</b></a>, 25/04/2020 </li>
 	<li><a href="https://seobeomjin.github.io/blog/CS234/" target = "_blank"> <b> RL : Record of Standford CS234 Course, Reinforcement </b></a>, 16/10/2020 </li>
 	<li><a href="https://seobeomjin.github.io/blog/CS224N/" target = "_blank"> <b> NLP : Record of Standford CS224N Course, Natural Language Processing </b></a>, 15/10/2020 </li>
