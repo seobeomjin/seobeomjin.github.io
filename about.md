@@ -8,9 +8,9 @@ title: About Noah
 		<img src="{{ '/assets/img/me3.jpg' | prepend: site.baseurl }}" alt=""/> 
 		<li>Hope to solve a significant problem that can be helpful for others.</li>
 	<h2 class="pageTitle"> Education </h2>
-		<li> B.S in Biomedical Engineering and Software Convergence from Kyunghee University, 2015 (expected 02.2022) </li>
+		<li> B.S in Biomedical Engineering and Software Convergence from Kyunghee University, 2015 – (Expected) Feb 2022 </li>
 	<h2 class="pageTitle"> Work Experience </h2>
-		<li> Research Intern at KIST Europe's Smart Convergence Group </li>	
+		<li> Research Intern at KIST Europe's Smart Convergence Group, Feb 2020 – Aug 2020 </li>	
 	<h2 class="pageTitle"> Interests </h2>
 		<li> Multimodal Task </li>
 		<li> Meta Learning </li>
