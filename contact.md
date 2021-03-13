@@ -9,11 +9,11 @@ title: Archives
 	<li><a href="https://seobeomjin.github.io/blog/ABN/" target = "_blank"> <b> Paper Review : Attention Branch Network 리뷰 </b></a>, 08/11/2020 </li>
 	<!-- <li><a href="https://seobeomjin.github.io/blog/read_paper/" target = "_blank"> <b> Record of read papers </b></a>, 13/10/2020 </li> -->
 	<li><a href="https://seobeomjin.github.io/blog/SCFP/" target = "_blank"> <b> Paper Review : Convolutional neural network based on SMILES representation of compounds for detecting chemical motif 리뷰</b></a>, 25/04/2020 </li>
-	<li><a href="https://seobeomjin.github.io/pdf_files/DALL_E.pdf" target = "_blank"> <b> Review SumUp : DALL_E SumUp (by Yannic Kilcher) </b></a>, 22/02/2021 </li>
-	<li><a href="https://seobeomjin.github.io/pdf_files/The Lottery Ticket Hypothesis.pdf" target = "_blank"> <b> Review SumUp : The Lottery Ticket Hypothesis SumUp (by Yannic Kilcher) </b></a>, 17/12/2020 </li>
-	<li><a href="https://seobeomjin.github.io/pdf_files/SupConLearning.pdf" target = "_blank"> <b> Review SumUp : Supervised Contrastive Learning SumUp (by Yannic Kilcher) </b></a>, 15/12/2020 </li>
-	<li><a href="https://seobeomjin.github.io/pdf_files/BYOL.pdf" target = "_blank"> <b> Review SumUp : BYOL SumUp (by Yannic Kilcher) </b></a>, 15/12/2020 </li>
-	<li><a href="https://seobeomjin.github.io/pdf_files/simCLR.pdf" target = "_blank"> <b> Review SumUp : simCLR SumUp (by PR12) </b></a>, 15/12/2020 </li>
+	<li><a href="https://seobeomjin.github.io/pdf_files/DALL_E.pdf" target = "_blank"> <b> (Rough) Review SumUp : DALL_E SumUp (by Yannic Kilcher) </b></a>, 22/02/2021 </li>
+	<li><a href="https://seobeomjin.github.io/pdf_files/The Lottery Ticket Hypothesis.pdf" target = "_blank"> <b> (Rough) Review SumUp : The Lottery Ticket Hypothesis SumUp (by Yannic Kilcher) </b></a>, 17/12/2020 </li>
+	<li><a href="https://seobeomjin.github.io/pdf_files/SupConLearning.pdf" target = "_blank"> <b> (Rough) Review SumUp : Supervised Contrastive Learning SumUp (by Yannic Kilcher) </b></a>, 15/12/2020 </li>
+	<li><a href="https://seobeomjin.github.io/pdf_files/BYOL.pdf" target = "_blank"> <b> (Rough) Review SumUp : BYOL SumUp (by Yannic Kilcher) </b></a>, 15/12/2020 </li>
+	<li><a href="https://seobeomjin.github.io/pdf_files/simCLR.pdf" target = "_blank"> <b> (Rough) Review SumUp : simCLR SumUp (by PR12) </b></a>, 15/12/2020 </li>
 	<!-- 논문정리 -->
 	<!--  -->
 	<!--  -->
