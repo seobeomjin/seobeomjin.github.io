@@ -36,8 +36,8 @@ title: Archives
   </div>
 
 
-  ETC에 들어갈 것들 
+  <!-- ETC에 들어갈 것들 
   (공부들 정리, 필요 없는 거 빼기..)
   LinAlg 정리 
   Convex Optimization 정리 
-  RL 
+  RL  -->
