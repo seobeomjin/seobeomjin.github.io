@@ -18,7 +18,7 @@ title: Archives
 	<!--  -->
 	<h1 class="pageTitle"> ETC </h1>
 	<li><a href="https://seobeomjin.github.io/blog/Quiz/" target = "_blank"> <b> Quiz </b></a>, 06/11/2020 </li>
-	<li><a href="https://seobeomjin.github.io/blog/2_day_LinAlg_1.pdf" target = "_blank"> <b> LinAlg : Short-Course SumUp-1 </b></a>, 06/11/2020 </li>
+	<li><a href="https://seobeomjin.github.io/_posts_/2_day_LinAlg_1.pdf" target = "_blank"> <b> LinAlg : Short-Course SumUp-1 </b></a>, 06/11/2020 </li>
 	<!-- <li><a href="https://seobeomjin.github.io/blog/CS234/" target = "_blank"> <b> RL : Record of Standford CS234 Course, Reinforcement </b></a>, 16/10/2020 </li>
 	<li><a href="https://seobeomjin.github.io/blog/CS224N/" target = "_blank"> <b> NLP : Record of Standford CS224N Course, Natural Language Processing </b></a>, 15/10/2020 </li> -->
 	<li><a href="https://seobeomjin.github.io/blog/Bengio_with_Lex/" target = "_blank"> <b>  Interview : Record of Yoshua Bengio's interview with Lex Fridman </b></a>, 13/10/2020 </li>	
