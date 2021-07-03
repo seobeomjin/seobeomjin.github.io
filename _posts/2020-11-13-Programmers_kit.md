@@ -186,7 +186,7 @@ publised : true
         return str(int(''.join(sorted_numbers_str)))
 ```
     - 첫 글자의 크기(ASCII) 순서대로(오름차순) 2) 글자의 크기가 같다면 그 다음 길이를 체크. <br>
-<br>
+
 3. H-Index : 주어진 배열에서 h보다 큰 값이 h개 이상 존재하는 h의 최댓값 구하기Lv2 <br>
 ```python
     def solution(citations):

@@ -270,6 +270,24 @@ publised : true
 #### Stack 
 - Brackets /  / Easy
 ```python
+    # 100 % 
+    # Detected time complexity : O(N)
+    def solution(S):
+        b = {"(":1 , ")":-1, "[":2, "]":-2, "{":3, "}":-3}
+        stack = []
+        for br in S : 
+            if b[br] > 0 : # 들어온 입력이 opener일 경우  
+                stack.append(br)
+            else : # 들어온 입력이 closer일 경우 
+                if not stack : return 0 # stack이 비어있을 경우 
+                else : # 스택에 아이템이 있을 경우
+                    if b[stack[-1]] + b[br] != 0 : #0이 아니면 다르 것  
+                        return 0 
+                    else : # 0이면 
+                        stack.pop()
+        return 0 if stack else 1
+    # ref > https://m.blog.naver.com/PostView.nhn?blogId=alwlren_00&logNo=221614962593&categoryNo=21&proxyReferer=https:%2F%2Fwww.google.com%2F
+
     # 50 %  ( Correctness 100% Performance 20% )
     # Detected time complexity : O(3**N)
     def solution(S):
@@ -291,3 +309,74 @@ publised : true
         return 1 if not stack else 0
 ```
 - 스택은 맞긴 한데, 각 페어쌍을 어떻게 비교해서 스택에서의 값과 비교할 것인지가 관건,, 
+
+#### Lesson 8 Leader 
+- Dominator 
+```python 
+    # 100 % 
+    # Detected time complexity : O(N*log(N)) or O(N)
+    def solution(A):
+        half = len(A)/2
+        d = {}
+        for idx, elem in enumerate(A):  # O(N)
+            d[elem] = d.get(elem, []) #O(1)
+            d[elem].append(idx) #O(1)
+        for val in d.values(): # O(logN) or O(N)
+            if len(val) > half : 
+                return val[0]
+        return -1
+```
+
+#### Lesson 9 Maximum Slice Problem 
+- ★★★ MaxDoubleSliceSum / 배열의(X,Y,Z) index가 주어지면 sum(arr[x+1:y]) + sum(arr[y+1:z])을 구하는 문제 / Medium  
+```python
+    # 모든 조합의 케이스는 complexity가 많이 나올 줄 알고 일부러 그렇게 안품. 그렇게 풀면 (53%임(correct 100, perform 14))
+    #
+    # 다른 방법이 필요했음. 
+    # predix arr 구성한 다음 앞에서 가장 작은 거 찾고, 뒤에서 가장 큰거 찾은 다음 사이에서 가장 작은 값을 빼려 했는데, 
+    # 그러면 1) max가 앞에 나오고 min이 뒤에 나올 경우, 2) 중간의 Y가 큰 영향을 미칠 경우. 를 고려할 수 없어, 
+    # (위의 풀이는 X~Z 범위를 정하고 Y 하나를 뺀다는 풀이인데, Y에 따라 답이 틀릴 수 있어 이건 정답이 아닌 거 같다.)
+    # 머리만 쥐어 짰음.
+    # 
+    # 그럼, 왼쪽 끝부터 시작되는 Sum과, 오른쪽 끝부터 시작되는 sum을 찾아야 할 거 같은데 
+    # ref) https://curt-park.github.io/2018-09-14/algorithm-max-double-slice-sum/ 
+
+    def solution(A):
+        N = len(A)
+        l_max_sum = [0]*N # 왼쪽 끝부터 summation
+        r_max_sum = [0]*N # 오른쪽 끝부터 summation
+
+        for i in range(1,N-2): # X+1부터니까 1부터이고, 끝의 Y,Z 의 두 요소를 빼야 하기 때문에 N-2. 
+            l_max_sum[i] = max(0,l_max_sum[i-1]+A[i]) # X,Y가 연속적으로 있는 경우 0이 될 수 있으므로 max의 최솟값은 0이상임. 
+        for i in range(N-2,1,-1): # Z-1부터니까 N-2이고, 앞쪽 끝의 X,Y의 두 요소를 빼고 Y+1까지니까 1까지. -1씩 뒤로. 
+            r_max_sum[i] = max(0,r_max_sum[i+1]+A[i]) # 마찬가지로 max의 최소는 0이고, 오른쪽 끝부터 summation 계산
+
+        max_ = 0 
+        for i in range(1,N-1): #여기서 i는 Y를 표현, 1번부터 되는 것은 X지나고 X+1부터, N-2까지 Y가 될 수 있음
+            max_ = max(max_, l_max_sum[i-1]+r_max_sum[i+1]) # i 즉 Y 기준으로 X+1까지가 i-1이고, Y+1이 i+1임. 
+        return max_ # 그 중 max값을 return 
+```
+
+
+#### 
+- CountFactors / 
+```python
+    def solution(N):
+        import math
+        if N ==1 : return 1
+        last_factor = 0 
+        count = 0 
+        f = 1 
+        while f < math.sqrt(N)+1 :  
+            if N%f==0 : 
+                if int(N/f) == last_factor : break
+                if int(N/f) == f :  # f*f = N case
+                    count +=1 
+                else : # f*M = N case
+                    count +=2 
+                last_factor = f 
+                f +=1 
+            else : f +=1 
+        return count 
+
+```

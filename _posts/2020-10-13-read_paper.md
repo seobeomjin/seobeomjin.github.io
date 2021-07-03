@@ -3,7 +3,7 @@ layout : post
 title : About task of reading papers
 date : 2020-10-13
 description : 
-published : true
+published : false
 --- 
 Here is a repository which I record the flow of read papers. <br>
 If want to check details of a certain paper, please check google docs "papers review".  

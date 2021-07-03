@@ -161,10 +161,10 @@ published : true
     # range(P-1,i).  To make sure we don't try an index less than zero, replace P-1 with max(P-1,0)
 ```
 - 어려웠던 점 <br>
-    1. 일단 문제 해석이 너무 난해했음. <br>
-    2. sort를 할 생각을 왜 못했는지. 반성. Array라는 것에 갖혀 너무 쉽게 생각했음. <br>
+    1) 일단 문제 해석이 너무 난해했음. <br>
+    2) sort를 할 생각을 왜 못했는지. 반성. Array라는 것에 갖혀 너무 쉽게 생각했음. <br>
        >>> 문제의 틀에 갖히지 말 것.<br>
-    3. 직접 sort를 할 필요없이 swap된 횟수만을 계산하면 complexity를 낮출 수 있음. <br>
+    3) 직접 sort를 할 필요없이 swap된 횟수만을 계산하면 complexity를 낮출 수 있음. <br>
        >>> 하지만 코드 이해를 잘 못했다. 이거 할 것. <br>
 <br>
 
@@ -674,11 +674,11 @@ def minimumSwaps(arr):
 
 - Interview kit
     - Arrays (4/5)
-    
+
     - Dict and Hashmaps (5/5) (solved all)
     - String Manipulation (5/5) (solved all)
     - Sorting (3/5)
-    
+
     - Greedy Algorithms (1/5)
     - Search (1/5)
     - Dynamic Programming (0/4)
