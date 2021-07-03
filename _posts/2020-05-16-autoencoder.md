@@ -3,6 +3,7 @@ layout: post
 title: Naver Engineering Autoencoder 발표 정리
 date: 2020-05-16 
 description : naver engineering Autoencoder 발표에 대한 정리입니다. 
+published : true
 comments : true
 ---
 

@@ -3,7 +3,7 @@ layout : post
 date : 2020-11-13
 title : Programmers 알고리즘 문제풀이 요약 
 description : 알고리즘 문제풀이를 요약합니다. 
-publised : true
+published : true
 ---
 
 ## Programmers 코딩테스트 고득점 kit  

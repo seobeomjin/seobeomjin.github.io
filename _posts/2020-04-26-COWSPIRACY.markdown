@@ -3,6 +3,7 @@ layout: post
 data: 2020-04-26
 title: Netflix documetary 작품, “COWSPIRACY”
 description: Netflix Documentary COWSPIRACY
+published : false
 comments: true 
 ---
 

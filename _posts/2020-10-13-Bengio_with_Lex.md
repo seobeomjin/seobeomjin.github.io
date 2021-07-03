@@ -3,7 +3,7 @@ layout: post
 title : Record of Yoshua Bengio's interview with Lex Fridman
 date : 2020-10-13
 description : 
-public : true 
+published : true
 ---
 
 Note that it is not refined well, but raw memo. 
