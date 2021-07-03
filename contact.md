@@ -19,7 +19,7 @@ title: Archives
 	<!--  -->
 	<!--  -->
 	<h1 class="pageTitle"> Studies </h1>
-	<li><a href="https://seobeomjin.github.io/blog/2_day_LinAlg_1.pdf" target = "_blank"> <b> Linear Algebra : Short Course SumUp-1 </b></a>, 13/03/2021 </li>
+	<li><a href="https://seobeomjin.github.io/pdf_files/2_day_LinAlg_1.pdf" target = "_blank"> <b> Linear Algebra : Short Course SumUp-1 </b></a>, 13/03/2021 </li>
 	<li><a href="https://seobeomjin.github.io/pdf_files/2_day_LinAlg_2.pdf" target = "_blank"> <b> Linear Algebra : Short Course SumUp-2 </b></a>, 13/03/2021 </li>
 	<li><a href="https://seobeomjin.github.io/pdf_files/2_day_LinAlg_3.pdf" target = "_blank"> <b> Linear Algebra : Short Course SumUp-3 </b></a>, 13/03/2021 </li>
 	<li><a href="https://seobeomjin.github.io/pdf_files/2_day_LinAlg_4.pdf" target = "_blank"> <b> Linear Algebra : Short Course SumUp-4 </b></a>, 13/03/2021 </li>
