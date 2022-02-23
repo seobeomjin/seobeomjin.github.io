@@ -1,9 +1,9 @@
 ---
 layout: post
 title: GraphSAGE paper review
-subtitle: Inductive Representation Learning on Large Graphs 
+subtitle: Inductive Representation Learning on Large Graphs, 2017
 categories: Paper-review
-tags: Graph unsupervised-learning
+tags: graph unsupervised-learning large-graph
 comments: True
 published: True
 ---
@@ -20,7 +20,6 @@ published: True
 
 - 실험 결과 <br>
     본 논문에서는 3 가지의 inductive node classification task에 대해서 타 모델에 비해 outperformance를 달성한다. 
-
 <!-- ## Main Contribution -->
 <!-- - propose a general framework, called GraphSAGE (SAmple and aggreGatE)
     - leverage node features (e.g., text attributes, node profile information, node degrees) in order to learn an embedding function that generalizes to unseen nodes.
@@ -28,26 +27,25 @@ published: True
     -  train a set of aggregator functions that learn to aggregate feature information from a node’s local neighborhood (Figure 1). -->
 
 <!-- ## Introduction -->
-
 ## Method
 본 논문에서 제안하는 바의 key idea는 node의 local neighborhood로부터 feature information 을 어떻게 aggregate 할 수 있을 것인지에 관한 부분이다. 
 따라서 embedding을 어떻게 generation 할 수 있는지, 그 다음 embedding을 어떻게 학습할 수 있는지에 대해 살펴보자.
 <figure>
 	<img src="{{ '/assets/images/graphsage/Fig1.jpg' | prepend: site.baseurl }}" alt=""> 
 </figure>
-위의 Figure1은 GraphSAGE가 sampling과 aggregate 을 통해 node embedding을 학습하는 과정을 시각화한 예시를 보여준다. 각 노드를 기준으로 e a fixed-size set of neighbors 에 대해서 uniform sampling 을 통해 주변의 이웃들을 sampling 해준다. sampling된 주변의 node embedding을 aggregate 해주고, 자기 자신의 node embedding과 정보를 concat하여 node embedding이 업데이트 된다. 자세한 내용은 아래의 과정에서 살펴보자.  
+위의 Figure1은 GraphSAGE가 sampling과 aggregate 을 통해 node embedding을 학습하는 과정을 시각화한 예시를 보여준다. 각 노드를 기준으로 fixed-size set of neighbors 에 대해서 uniform sampling 을 통해 주변의 이웃들을 sampling 해준다. sampling된 주변의 node embedding을 aggregate 해주고, 자기 자신의 node embedding과 정보를 concat하여 node embedding이 업데이트 된다. 자세한 내용은 아래의 과정에서 살펴보자.  
 
-- Embedding generation (i.e., forward propagation) algorithm
-<figure>
-    <img src="{{ '/assets/images/graphsage/Fig2.jpg' | prepend: site.baseurl }}" alt=""> 
-</figure>
-Embedding은 위의 Algorithm과 같은 방식으로 생성된다. 주요한 line들에 대해 작동하는 방식을 살펴보면 아래와 같다. <br>
-    - line 4: k-1 layer에 있는 feature embedding h에서 neighborhood function 에 속해 있는 u node들에 대해 aggregate function 을 통해 neighborhood embedding $h_{N(v)}^k$를 얻어줍니다. <br>
-    - line 5: 업데이트 대상이 되는 v node의 h embedding과 concat 을 해준 후, k layer의 weight matrix W를 곱해주어 새로운 embedding을 얻습니다. 이후 nonlinear activation function 을 취해 $h_v^k$를 얻습니다.<br>
-    - line 7: hyperspere normalization을 취해 줍니다. 이렇게 normalization을 취해주면 NNS(Nearest Neighbor Search)에 유용하다고 합니다.<br>
+- Embedding generation (i.e., forward propagation) algorithm <br>
+    <figure>
+        <img src="{{ '/assets/images/graphsage/Fig2.jpg' | prepend: site.baseurl }}" alt=""> 
+    </figure>
+    - Embedding은 위의 Algorithm 과 같은 방식으로 생성된다. 주요한 line들에 대해 작동하는 방식을 살펴보면 아래와 같다.
+        - line 4: k-1 layer에 있는 feature embedding h에서 neighborhood function 에 속해 있는 u node들에 대해 aggregate function 을 통해 neighborhood embedding $h_{N(v)}^k$를 얻어준다. <br>
+        - line 5: 업데이트 대상이 되는 v node의 h embedding과 concat 을 해준 후, k layer의 weight matrix W를 곱해주어 새로운 embedding을 얻는다. 이후 nonlinear activation function 을 취해 $h_v^k$를 얻는다.<br>
+        - line 7: hyperspere normalization을 취해 준다. 이렇게 normalization을 취해주면 NNS(Nearest Neighbor Search)에 유용하다고 하다.<br>
     - Relation to the Weisfeiler-Lehman Isomorphism Test
 - Learning the parameters of GraphSAGE
-- Aggregator Architectur
+- Aggregator Architecture
     - Mean aggregator 
     - LSTM aggregat
     - Pooling aggregator
