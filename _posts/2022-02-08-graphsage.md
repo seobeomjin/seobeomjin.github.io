@@ -22,9 +22,9 @@ published: True
     본 논문에서는 3 가지의 inductive node classification task에 대해서 타 모델에 비해 outperformance를 달성한다. 
 <!-- ## Main Contribution -->
 <!-- - propose a general framework, called GraphSAGE (SAmple and aggreGatE)
-    - leverage node features (e.g., text attributes, node profile information, node degrees) in order to learn an embedding function that generalizes to unseen nodes.
-    -  learn the topological structure of each node’s neighborhood as well as the distribution of node features in the neighborhood.
-    -  train a set of aggregator functions that learn to aggregate feature information from a node’s local neighborhood (Figure 1). -->
+- leverage node features (e.g., text attributes, node profile information, node degrees) in order to learn an embedding function that generalizes to unseen nodes.
+-  learn the topological structure of each node’s neighborhood as well as the distribution of node features in the neighborhood.
+-  train a set of aggregator functions that learn to aggregate feature information from a node’s local neighborhood (Figure 1). -->
 
 <!-- ## Introduction -->
 ## Method
@@ -49,10 +49,9 @@ published: True
     - Mean aggregator 
     - LSTM aggregat
     - Pooling aggregator
+
 ## Experiments
-
 ## Conclusion 
-
 ## Reference
 - <a href="https://arxiv.org/abs/1706.02216"> Paper </a><br>
 - <a href="https://www.youtube.com/watch?v=vinQCnizqDA&t=2s"> GraphSAGE Review Video </a><br>
