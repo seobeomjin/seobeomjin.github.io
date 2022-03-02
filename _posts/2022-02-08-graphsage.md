@@ -61,11 +61,12 @@ published: True
 ## Reference
 - <a href="https://arxiv.org/abs/1706.02216"> Paper </a><br>
 - <a href="https://www.youtube.com/watch?v=vinQCnizqDA&t=2s"> GraphSAGE Review Video </a><br>
+
 ## 느낀 점
 - random permutation 을 수행한 LSTM aggregator function이 좋은 성능을 보인 것이 흥미로웠다. 
 - MHSA(Multi Head Self Attention) aggregator function 을 활용하면 어떤 결과가 나올지 궁금하다. 
     - multi head를 이용하는 점, self-attention 이 inductive bias가 약한 점을 고려하면 더 다양한 관점의 feature를 내포할 수 있지 않을까? 
-    
+
 <!-- - 번외로, Trm과 GCN의 업데이트 방식이 유사하게 보이면서 차이점이 드러나는 게 흥미롭다. 
 - Trm; MLP(MHSA(token embedding))
 - GCN; MLP(A) -->
