@@ -5,7 +5,7 @@ subtitle: Perceiver, General Perception with Iterative Attention, 2021
 categories: Paper-review
 tags: multi-modal-learning
 comments: True
-published: False
+published: True
 ---
 
 ## Summary 
