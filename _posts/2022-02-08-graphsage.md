@@ -44,8 +44,14 @@ published: True
         - line 4: k-1 layer에 있는 feature embedding h에서 neighborhood function 에 속해 있는 u node들에 대해 aggregate function 을 통해 neighborhood embedding $h_{N(v)}^k$를 얻어준다. <br>
         - line 5: 업데이트 대상이 되는 v node의 h embedding과 concat 을 해준 후, k layer의 weight matrix W를 곱해주어 새로운 embedding을 얻는다. 이후 nonlinear activation function 을 취해 $h_v^k$를 얻는다.<br>
         - line 7: hyperspere normalization을 취해 준다. 이렇게 normalization을 취해주면 NNS(Nearest Neighbor Search)에 유용하다고 하다.<br>
+
     - Relation to the Weisfeiler-Lehman Isomorphism Test
+        위의 Algorithm 1은 the Weisfeiler-Lehman (WL) isomorphism test(also known as “naive vertex refinement") 의 하나의 instance 가 될 수 있다. (WL isomorphism 에서 isomorphic 이란  subgrah A에서 edge 로 이웃한 모든 node 들의 쌍에 대해,  subgraph B에서 대응되는 각 node 들의 쌍 또한 edge 로 이웃해 있을 때 isomorphic 하다고 한다.) 2개의 subgraph 에 대해서 Algorithm 1의 output 이 identical 하면, WL test 는 두 그래프를 identical 하다고 말한다. GraphSAGE는 large graph의 representaion 을 학습하기 위한 model 이지만, WL test에 continuous approximation 을 하기도 한다. 
+<br>
+
 - Learning the parameters of GraphSAGE
+![fig5](/assets/images/graphsage/Fig5.jpg) <br>    
+
 - Aggregator Architecture
     - Mean aggregator 
     - LSTM aggregat
