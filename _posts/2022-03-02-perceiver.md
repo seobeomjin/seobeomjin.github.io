@@ -40,7 +40,7 @@ data modality에 따른 explicit한 temporal or spatial information을 주지 �
 ## 마치며
 - 모델의 자체적인 captured information에 inductive bias를 최소화하기 위한 Trm기반의 general architecture가 등장했다고 생각한다. 이런 관점에서 inductive bias를 최소화하는 모델 기반의 architecture가 흥미로웠고, inductive bias를 최소화 할뿐만 아니라 조절할 수 있는 새로운 모듈이 등장할 수 있을까? 하는 생각이 든다. (진정한 generality는 숲을 볼 수도, 나무를 볼 수도 있어야 하지 않은지, 혹은 inductive bias 외의 다른 중요한 관점에서의 접근을 하는 류) 
 - 다양한 modality를 다루기 위해 최대한 general method를 쓰려는 방법론들이 보인 것 같다. 위에서 언급한 Trm도 그랬고, FF 또한. 기존의 position encoding에도 Fourier Feature를 사용하는 것이 흥미로웠다. (근데 최근의 연구에서는 FF를 많이 쓰는 거 같다.)
-- cross-attention 을 반복적으로 수행 할수록 더 잘 된다고는 하지만, iterative input과 computational power에 limit이 없을 수 없다. bottleneck에서 오는 장점을 갖되, 더 효율적인 방법으로 그걸 보완할 수는 없을까? ()
+- cross-attention 을 반복적으로 수행 할수록 더 잘 된다고는 하지만, iterative input과 computational power에 limit이 없을 수 없다. bottleneck에서 오는 장점을 갖되, 더 효율적인 방법으로 그걸 보완할 수는 없을까? (detail information을 어떻게 더 잘 capture할까)
 - 포스팅에 틀린 부분이 있을 수 있으니, 참고해서 봐주시면 감사하겠습니다. 오류에 대한 수정과 토론은 언제든 환영입니다! :)
 
 
