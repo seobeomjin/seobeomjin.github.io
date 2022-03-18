@@ -18,10 +18,15 @@ published: True
 
 ![fig](/assets/images/perceiver-io/fig4.jpg) 
 <br>
-위의 그림은 각 modality마다 어떤 식으로 query array가 구성되는지를 보여줍니다.
+위의 그림은 각 modality마다 어떤 식으로 query array가 구성되는지를 보여줍니다. MLM 같은 경우는 단순하게 position embedding 정보만 주며, classification 같은 경우는 task id를 줍니다. Starcraft2 task에서는 entities에 대한 input features가 홀로 사용되고, Optical flow task에서는 Input faeture와 position feature가 함께 사용되고 있습니다. 또, heterogeneous outputs을 다뤄야 하는 경우에는, 각각의 modality 정보가 서로 concat하여 쿼리가 만들어 집니다.
 
 
 ## Experiments 
+![fig](/assets/images/perceiver-io/fig5.jpg)
+<br>
+
+![fig](/assets/images/perceiver-io/fig6.jpg)
+<br>
 
 ## Reference
 - <a href = "https://arxiv.org/abs/2107.14795"> Paper </a>
