@@ -29,7 +29,7 @@ published: True
 
 <!-- ## Introduction -->
 ## Method
-본 논문에서 제안하는 바의 key idea는 <strong>node의 local neighborhood로부터 feature information 을 어떻게 aggregate 할 수 있을 것인지</strong>에 관한 부분이다. 따라서 <strong>embedding을 어떻게 generation 할 수 있는지, 그 다음 embedding을 어떻게 학습할 수 있는지<</strong>>에 대해 살펴보자.
+본 논문에서 제안하는 바의 key idea는 <strong>node의 local neighborhood로부터 feature information 을 어떻게 aggregate 할 수 있을 것인지</strong>에 관한 부분이다. 따라서 <strong>embedding을 어떻게 generation 할 수 있는지, 그 다음 embedding을 어떻게 학습할 수 있는지</strong>에 대해 살펴보자.
 <figure>
 	<img src="{{ '/assets/images/graphsage/Fig1.jpg' | prepend: site.baseurl }}" alt=""> 
 </figure>
