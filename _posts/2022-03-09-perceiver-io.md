@@ -35,13 +35,41 @@ published: True
 <br>
 위의 결과는 8 GLUE benchmark task에 대해서 UTF-8 bytes를 raw directly input data를 활용하여서, 각기 다른 Multitask 방법에 따른 실험 결과를 보여줍니다. single task의 경우는 a special token 을 함께 넣어주며 각각의 모델이 독립적으로 학습한 결과를 보여줍니다. shared input token의 경우는 a single token이 모든 task들에 대해서 사용됩니다. task specific input token의 경우는, 각 task마다 명시적으로 차이를 주는 방식입니다. 이러한 방법은 BERT에서 [CLS] token을 적용하는 것과 비슷한 방법이라고 생각할 수 있습니다. 한편, 본 모델이 제안하는 Multitask Query 에서는 이러한 [CLS] 꼴의 토큰이 필요가 없이 우수한 성능을 보이고 있으며, task의 수가 매우 많아질 때에는 더 매력적인 강점이 되게 됩니다.
 
+#### 2. Optical flow
+Optical flow task는 비디오의 연속적인 두 프레임의 이미지 사이에서 각 pixel 사이의 2D displacement를 예측하는 task입니다. optical flow는 navigation, visual odometry(시각적 주행거리 예측(?)), 3D geometry 예측, 3D human pose estimation 등 넓은 application 범주를 가지고 있습니다. Optical flow가 현재 뉴럴넷에 대해 challenging 하다고 하는데요, 그 이유는 1) Optical flow는 대응 관계에 의존하기 때문입니다. a single frame은 flow에 대한 정보를 제공하지 않으며, 완전히 서로 다른 이미지가 동일한 ground truth flow를 생성할 수도 있다고 합니다. 2) flow를 annotation하는 게 매우 어렵기 때문입니다. (AutoFlow같은 dataset이 있기는 하지만) image가 realistic하고 high-quality의 ground truth를 가진 데이터셋은 작고, biased 되어 있다고 논문에서 언급하고 있습니다. 
+
+optical flow estimation task 를 위해서는, 1) points 사이의 대응 관계를 찾아야 하고, 2) 점들 사이의 상대적인 offset을 계산하고, 3) estimated flow를 image의 넓은 공간에 전파해야 합니다. 이러한 여러 과정을 위해 연구자들은 specific한 architecture model들을 제안하고는 하였습니다. 
+
+![fig](/assets/images/perceiver-io/optical-flow-table.jpg)
+<br>
+위의 결과는 SOTA를 달성하고 있는 Network 들과 결과를 비교한 부분입니다. Perceiver IO 는 위에서 언급한 그런 step들을 수행하지 않고 straightforward 라게 입력을 취하고 있습니다. 두 프레임을 channel dimension에 따라 concatenate 하였고, 각 픽셀을 중심으로 한 3x3 patch를 추출하여 입력으로 줍니다. (3x3 patch를 쓰면 inductive bias가 생길 수 있어, 본 논문에서 patch를 사용하지 않고 진행한 ablaion study를 진행합니다. patch를 사용하지 않았을 때는, 거의 유사하나 patch를 사용했을 때보다 아주 미세하게 성능이 조금 저조합니다.) 위의 여러 과정을 거치는 SOTA 모델에 비해 비교적 단순한 방법으로 compatible한 성능을 보여주고 있습니다.
+
+#### 3. Multimodal autoencoding 
+Multimodal autoencoding에서는 Kinetics-700-2020 dataset을 활용하여 image, audio, class label을 reconstruction합니다.
+
+![fig](/assets/images/perceiver-io/mm-autoencoding-example.jpg)
+<br>
+위의 사진은 image, audio가 각각 reconstruction 된 것을 보여줍니다. Perceiver IO 에서는 입력에 각각의 modality 별로 modality-specigfic embeddings를 넣어주어 각 modality를 구분해 주고, 모든 입력을 2D array로 serialization하는 방식을 사용합니다. 쿼리로는 Fourier-based position embedding을 사용합니다. 
+
+![fig](/assets/images/perceiver-io/mm-autoencoding-table.jpg)
+<br>
+위는 각 오디오, 비디오, class label의 예측 정도를 보여줍니다. latent variable들이 modality사이에서 shared 되어 있고, 명시적으로 할당되어 있지 않기 때문에 각 modality 사이의 reconstruction quality가 loss term의 weight에 의해 trade off 관계가 있다고 말합니다. 본 실험에서는 accuracy를 낮추고, PSNR을 높이는 쪽을 선택했습니다. accuracy에 중점을 둔 실험에서는 비디오 20.7 PSNR을 가지며, Top-1 45%의 정확도를 보여줍니다.
+
+#### 4. StarCraft II 
+
+StarCraft 게임을 운영하는 AlphaStar라는 SOTA system에서 agent unit selection policy를 돕는 부분에서 Tranformer가 사용됩니다. 한편, 여기서 이 Transformer를 Perceiver IO로 대체했을 때에도 동일한 수준의 승률을 보여줍니다. 
+
+#### 5. Image Classification 
+
 ![fig](/assets/images/perceiver-io/fig6.jpg)
 <br>
+마지막으로 ImageNet에 대한 이미지 분류 실험 결과입니다. 실험 결과 표의 위의 두 블록은 순서대로 ConvNet 기반의 모델들, ViT기반의 모델들의 성능을 보여줍니다. 아래의 세 블록에서는 각각 어떤 Feature를 함께 사용했냐에 따라 Perceiver, Perceiver IO 의 성능을 비교하며 보여주고 있습니다. 비록 Conv based, ViT based model의 성능에는 크게 미치지 못하지만, 2D architecture가 없거나 feature information을 따로 사용하지 않았을 경우에는 best result를 보여주고 있습니다. 
 
 ## Reference
 - <a href = "https://arxiv.org/abs/2107.14795"> Paper </a>
 
 ## The End 
 - 다양한 IO를 다룰 수 있게 되었다는 점이 인상깊은 논문이었다. 
-    - 정확한 쿼리로 정확한 information을 retrieval하기 위함이지만, 그럼에도 hand-desined한 query를 줘야 한다는 것이 결국은 조금 아직은 사람을 손을 타야 하는 것인가 하는 생각이 들었다. (더 나은 genral query를 줄 수 있는 후속 연구가 나올 거 같은 느낌..?)
+    - 정확한 쿼리로 정확한 information을 retrieval하기 위함이지만, 그럼에도 hand-desined한 query를 줘야 한다는 것이 결국은 조금 아직은 사람을 손을 타야 하는 것인가 하는 생각이 들었다. (더 나은 genral query를 줄 수 있는 후속 연구가 나올 거 같은 느낌?)
+    - 왜 잘 되지? 에 대해 조금 더 생각해 봤다. Perceiver와 동일한 구조인데 단순히 decoding 과정만 추가해서 잘 된거라면, 논문에서 언급한 대로 Query array가 효율적이었을 것으로 보인다. 그럼 Query array를 어떻게 주냐에 따라서 더 나은 output을 만들어 낼수도 있다는 말이 아닐까? 앞에서 했던 말의 반복인 것 같지만, more efficient and more general query array에 관한 모델이 나올 수도 있겠다는 생각이 든다.
 - Starcraft II 의 AlphaStar의 agent unit selection policy를 결정짓는 pointer network을 대체하면서 한 실험에서는, '이런 다양한 데이터 모달리티를 포함함에도 결국은 이 조차도 general model이 되기 위한 하나의 module로서 쓰이는구나.' 하는 생각이 들었다. 다양한 데이터 모달리티를 다루는 것은 '지능'의 전부가 아니라 '하나의 충분조건'이다 라는 느낌을 받은 부분이었다. 더 어려운 문제를 풀거나, 더 깊은 추론이 필요한 문제, 환경이 급변하는 등의 문제에서는 역시 RL이 필요한 것인가 하고. RL 게을리 하지 말자.
