@@ -8,7 +8,7 @@ comments: True
 published: True
 ---
 ## Summary 
-이번에 살펴본 논문은 Hierarchical Perceiver(HiP) 라는 논문입니다. 기존의 Perceiver 류의 모델이 Transformer 기반의 모델 구조, cross attention을 통해 다양한 modality를 다룰 수 있었습니다. 한편, High resolution을 가진 Image, Video 등의 입력에 대해서는 처리가 어려운 문제점을 지적합니다. 따라서 그에 대한 해결책으로 Hierarchical Perceiver(이하 HiP)를 제안합니다. HiP에서는 flatten operation을 통해서 input을 각 그룹으로 나누어, locality를 보존시키며 연산을 수행합니다. 각 그룹은 permutation invariant한 특성을 이용해 다시 merge하게 됩니다. 또한 large input에 대해서도 dense low-dimensional position embedding을 학습하기 위해 Masked Auto Encoding(MAE) self-supervied learning을 활용합니다. <a href = "https://arxiv.org/pdf/2111.06377.pdf">Masked Autoencoders Are Scalable Vision Learners<b></a> 논문에서 제시한 "masking을 활용한 pretrain이 여러 finetuning task에 효율적이다."</b>라는 점을 본 논문에서도 학습에 활용한 것으로 보입니다. 이를 통해 ImageNet, Audioset, PASCAL VOC 에서 기존의 Perceiver 대비 더 나은 정확도와 효율성을 보이고 있습니다.
+이번에 살펴본 논문은 Hierarchical Perceiver(HiP) 라는 논문입니다. 기존의 Perceiver 류의 모델이 Transformer 기반의 모델 구조, cross attention을 통해 다양한 modality를 다룰 수 있었습니다. 한편, High resolution을 가진 Image, Video 등의 입력에 대해서는 처리가 어려운 문제점을 지적합니다. 따라서 그에 대한 해결책으로 Hierarchical Perceiver(이하 HiP)를 제안합니다. HiP에서는 flatten operation을 통해서 input을 각 그룹으로 나누어, locality를 보존시키며 연산을 수행합니다. 각 그룹은 permutation invariant한 특성을 이용해 다시 merge하게 됩니다. 또한 large input에 대해서도 dense low-dimensional position embedding을 학습하기 위해 Masked Auto Encoding(MAE) self-supervied learning을 활용합니다. <a href = "https://arxiv.org/pdf/2111.06377.pdf">Masked Autoencoders Are Scalable Vision Learners</a> 논문에서 제시한 <b>"masking을 활용한 pretrain이 여러 finetuning task에 효율적이다."</b>라는 점을 본 논문에서도 학습에 활용한 것으로 보입니다. 이를 통해 ImageNet, Audioset, PASCAL VOC 에서 기존의 Perceiver 대비 더 나은 정확도와 효율성을 보이고 있습니다.
 ## Main Idea
 ![fig](/assets/images/hirarchical-perceiver/fig2.jpg)
 <br>
