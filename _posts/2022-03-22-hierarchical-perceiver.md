@@ -25,22 +25,35 @@ published: True
 위의 이미지는 왼쪽부터 순서대로 원본 이미지, 85% 비율의 groupwise-masking 이미지, 16-group model을 통한 output 복원 이미지를 나타냅니다. input tensor에 random & uniform mask 처리를 하고, decoder를 통해 나온 출력이 가려진 부분을 맞추는 식으로 positional embedding을 학습합니다. pretrain 과정은 <a href = "https://arxiv.org/pdf/2111.06377.pdf">Masked Autoencoders Are Scalable Vision Learners</a> 의 부분과 유사하게 진행되며, masking rate, hyperparameter 부분은 HiP setting에 맞게 수정하여 학습하였습니다.
 
 ## Experiements 
-
-
-## Reference
-
-## The End 
-
-
-
-
-
-
-<!-- ![fig](/assets/images/hirarchical-perceiver/table1.jpg)
-<br>
-
+- Comparison to state-of-the-art
 ![fig](/assets/images/hirarchical-perceiver/table2.jpg)
 <br>
+위의 테이블은 ImageNet image classification(top-1 accuracy)에 대한 결과를 보여줍니다. image classification task에서는 HiP 모델의 encoder부분만을 활용합니다. 타 모델에 비해 outperformance를 이루고 있지는 않지만, Perceiver류의 모델에 비해서는 좋은 성능을 보이고 있습니다. HiP-16은 81%, HiP-256은 79.9%의 정확도를 보이고 있습니다. 여기서 HiP-16과 HiP-256의 차이는 sub-block의 개수를 16개로 나누어 진행되는지, 256개의 block으로 나누어 진행되는지에 따라 달라집니다. input size가 더 클 경우에는 Hip-256을 사용하고는 합니다. (i.e. audio-visual inputs)<br>
 
-![fig](/assets/images/hirarchical-perceiver/fig4.jpg)
-<br> -->
+- Training steps per second 
+![fig](/assets/images/hirarchical-perceiver/table1.jpg)
+<br>
+위의 Table에서는 image resolution에 따른 초당 training step을 보여줍니다. (높을수록 나은 값) TPUv3에서 각 코어마다 8개의 이미지를 batch size로 활용하였고, HiP에서 hierarchical decoder block은 활용하지 않은 결과입니다. (즉, decoder block을 포함한 trainint step/sec 은 아닌 것입니다.) Perceiver IO 에 비해서 더 높은 resolution에서 더 빠른 학습 과정을 보여주고 있습니다.<br>
+
+- Ablations: MAE vs no MAE & importance of local structure
+![fig](/assets/images/hirarchical-perceiver/table4.jpg)
+<br>
+위의 결과에서는 learned positional embedding을 사용할 때, masked auto-encoding(MAE)을 활용하였을 경우와 그렇지 않았을 경우의 성능을 비교합니다. MAE를 사용하였을 때는 사용하지 않았을 경우에 비해 현저하게 성능이 개선되는 것을 확인해 볼 수 있습니다. 한편, MAE없이 Fourier positional embedding을 경우에도, MAE를 사용하였을 경우와 비슷한 성능을 보입니다. MAE를 통해 low-dimensional positional embedding을 학습이 성능 향상에 기여했다는 점을 보여줍니다. <br>
+<br>
+
+## Reference
+- <a href = "https://arxiv.org/abs/2202.10890"> Paper </a>
+
+<!-- ## The End  -->
+
+
+
+
+
+
+
+
+
+
+<!-- ![fig](/assets/images/hirarchical-perceiver/fig4.jpg) -->
+<!-- <br>  -->
