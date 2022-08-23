@@ -34,3 +34,21 @@ published: True
 ![method](/assets/images/deep-spectral-methods/method.png)<br>
 
       
+- inspiration from framed **the segmentation problem** as **one of graph partitioning.**
+- Our method
+    1. utilizes **a self-supervised network to extract dense features** corresponding to image patches.
+    2. then construct a weighted graph over patches, where **edge weights give the semantic affinity of pairs of patches**
+    3. consider the **eigendecomposition of this graph’s Laplacian matrix**
+    4. the **eigenvectors of the Laplacian of this graph** directly correspond to **semantically meaningful image regions**.
+        - Notably, the eigenvector with the smallest nonzero eigenvalue generally corresponds to the most prominent object in the scene.
+    
+    → surprisingly, simply **extracting bounding boxes or masks from this eigenvector** surpasses **the current state of the art on unsupervised object localization/segmentation** across numerous benchmarks.
+    
+- Next, we propose **a pipeline for semantic segmentatio**n
+    - convert the eigen-segments into discrete image regions by thresholding
+    - associate each region with a semantic feature vector from the network
+    - yielding semantic (pseudo-) labels
+    - Lastly, we perform self-training using these labels to refine our results
+    - evaluate against the ground truth segmentations.
+    
+    → performs well on complex images!
