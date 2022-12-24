@@ -38,7 +38,7 @@ struct compare{
 }
 ```
 
-- dijkstra pseudo code 
+- dijkstra pseudo code <br>
 ```cpp 
 //init
 visited [] = false 
@@ -58,8 +58,7 @@ for i // 1st FOR
     visited[minIndex] = true // visit check ★
 
     for j  //dist update based on till minIndex !
-        dist[j] = min (dist[j] , minCost + edge[minIndex][j] )
-    
+        dist[j] = min (dist[j] , minCost + edge[minIndex][j] ) 
 ```
 
 - Union Find pseudo code 
