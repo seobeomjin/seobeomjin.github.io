@@ -10,8 +10,9 @@ published: True
 
 ## Vanila Transformer
 ![vanila trm](/assets/images/trm-family/vanila-trm.png)<br>
-- self-attention is applied in each encoder and decoer. cross-attention  is applied between encoder and decoder. <br>
-- dot(Query vector, Key vector) =  attention score. <br>
+- self-attention is applied in each encoder and decoer. <br>
+- cross-attention is applied between encoder and decoder. <br>
+- dot(Query vector, Key vector) = attention score. <br>
 - and then dot(attention score, Value vector) = attention value. <br>
 - No long term dependency  
 
