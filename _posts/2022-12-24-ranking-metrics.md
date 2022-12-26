@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Information Retrieval Evalutaion metric 
-subtitle: Information Retrieval Evalutaion metric 에 대해 공부합니다. 
+title: ranking metric (MRR, MAP, NDCG) 공부
+subtitle: Information Retrieval Evaluation metric 에 대해 공부합니다. 
 categories: Study
 tags: ranking metric information-retrieval
 comments: True
@@ -33,19 +33,15 @@ published: True
     맨 앞의 값 뿐만 아니라, 뒤에 얼마나 빈번하게 positive item이 나오는지를 관찰할 수 있다. <br>
     더 상위에 올 수록 값을 크케 받을 수 있게 한다. <br>
 - 단점 <br>
-    pos/neg 를 구분할 때, 1~5 점 사이의 점수를 기반으로 mapping이 되어있으면, 이를 pos/neg 구분이 불명확하다(??) (binary면 좀 더 명확할텐데, 이는 그렇지 못한 경우를 말하나 보다.)<br>
+    pos/neg 를 구분할 때, 1~5 점 사이의 점수를 기반으로 mapping이 되어있으면, 이를 pos/neg 구분이 불명확하다(??) (binary면 좀 더 명확할텐데, 이는 그렇지 못한 경우를 말하나 보다.)
 
 ### NDCG (Normalized Discounted Cumulative Gain)
 
 - ideal ranking 이 (model predicted) real ranking 사이의 차이가 얼마나 나는지를 보여준다. 
 - ideal ranking ; highly related contents 가 앞 쪽에 우선 배치되는 이상적인 retrieval case 이다. 
 - ideal ranking과 real ranking 각각 따로따로 cumulative gain 을 summation 해서 구한다. ideal ranking 의 경우는 모든 real ranking에 비해서 값이 크거나 같다. 
--  0 <= NDCG <=1<br>
+-  0 <= NDCG <=1
    NDCG = sum(cumulative gain of real ranking) / sum(cumulative gain of ideal ranking)
-
-
-
-
 
 ### Reference
 - https://lamttic.github.io/2020/03/20/01.html
