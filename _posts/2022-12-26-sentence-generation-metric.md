@@ -14,7 +14,7 @@ published: True
   따라서 높을수록 모델이 확신을 가지고 생성한 값이며, 낮을수록 불확실한 확률값을 기반으로 생성됨을 의미한다. <br>
 
 - 수식 <br>
-![img](../assets/images/perplexity.png)
+![img](/assets/images/perplexity.png)
 
 ### BLEU 
 - BLEU score 는 크게 두 부분으로 구성된다. <br>
@@ -31,7 +31,7 @@ published: True
         ret = sqrt(sqrt(ret))
         ```
 - 수식 <br>
-![img](../assets/images/bleu.png)
+![img](/assets/images/bleu.png)
 
 - 단점 
     얼마나 reference 단어와의 일치하는지를 파악함, 따라서 단어의 유사성을 판단하지 못함. <br>
