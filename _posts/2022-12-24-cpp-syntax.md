@@ -39,27 +39,27 @@ struct compare{
 ```
 
 - dijkstra pseudo code <br>
-```cpp 
-//init
-visited [] = false 
-dist[] = INF 
+    ```cpp 
+    //init
+    visited [] = false 
+    dist[] = INF 
 
-dist[출발지] = 시작값 
+    dist[출발지] = 시작값 
 
-for i // 1st FOR
-    minCost = INF 
-    minIndex = -1 
-    for j // 2nd FOR
-        if( !visited[j] && minCost > dist[j] )  // minCost GET
-            minCost = dist[j] 
-            minIndex = j 
-    break condtions // (minCost == INF || minIndex == 도착지)  // break CONDITION
+    for i // 1st FOR
+        minCost = INF 
+        minIndex = -1 
+        for j // 2nd FOR
+            if( !visited[j] && minCost > dist[j] )  // minCost GET
+                minCost = dist[j] 
+                minIndex = j 
+        break condtions // (minCost == INF || minIndex == 도착지)  // break CONDITION
 
-    visited[minIndex] = true // visit check ★
+        visited[minIndex] = true // visit check ★
 
-    for j  //dist update based on till minIndex !
-        dist[j] = min (dist[j] , minCost + edge[minIndex][j] ) 
-```
+        for j  //dist update based on till minIndex !
+            dist[j] = min (dist[j] , minCost + edge[minIndex][j] ) 
+    ```
 
 - Union Find pseudo code 
 
