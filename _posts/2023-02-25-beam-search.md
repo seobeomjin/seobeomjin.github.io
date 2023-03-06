@@ -17,12 +17,12 @@ published: True
 - Beam Search 에서 k=1인 경우, Greddy Decoding 이 된다. 
 
 # Beam Search 
-
+![img](/assets/images/greedy_search.png) <br>
 - Beam Search 는 promising beam k개를 선별하여 진행하는 방식이다.
     - 가장 좋은 방법은 나올 수 있는 모든 경우의 수를 고려하여 누적 확률이 가장 높은 것을 찾는 것이지만, 이는 현실적으로 엄청난 time complexity 를 가진다. 
     - 이는 Greedy하게 하나만 가져가는 경우를 보완해준다. 
 - decoding step 
-    1. <EOS> token 를 만나기 전, word by word 문장 생성 과정
+    1. <EOS> token을 만나기 전, word by word 문장 생성 과정
         1-1. <ST> token을 시작으로 하나의 time step에서 k개의 후보를 선별한다. 
         1-2. 다음 sequence에서 k개에 대해 k개의 후보가 또 나오면 total k*k개의 후보가 된다. <br>
              여기서 누적 확률을 기준으로 상위 k개의 후보만을 선별한다. 
