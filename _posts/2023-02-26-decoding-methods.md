@@ -83,7 +83,7 @@ beam saerch 는 boring 하다는 특성이 있다.
     이에 좀 더 creative 하고 boring 하지 않은 단어를 선택하는 방법들이 등장하기 시작한다. <br>
 - sampling 이란 <br>
     sampling 방법론은 p(w_t | w_t-1:w_1) 의 확률이 주어졌을 때 randomly picking 하는 방법론이다. <br>
-    ![img](/assets/images/decoding-methods/samping_search.png)<br>
+    ![img](/assets/images/decoding-methods/sampling_search.png)<br>
     위의 그림과 같이 P(w|"The") 에서 ("car") 가 sampling 되었고, P(w|"The", "car") 에서 ("drives") 가 sampling 되었다. <br>
 - output 예시 <br>
     ```python
