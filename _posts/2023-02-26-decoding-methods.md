@@ -179,11 +179,6 @@ beam saerch 는 boring 하다는 특성이 있다.
 
     print("Output:\n" + 100 * '-')
     print(tokenizer.decode(sample_output[0], skip_special_tokens=True))
-
-
-    # Reference 
-    - <a href="https://littlefoxdiary.tistory.com/46"> blog post </a>
-    - <a href="https://huggingface.co/blog/how-to-generate"> How to generate text: using different decoding methods for language generation with Transformers </a>
     """
     Output:
     ----------------------------------------------------------------------------------------------------
@@ -192,3 +187,7 @@ beam saerch 는 boring 하다는 특성이 있다.
     What was that? I had a lot o
     """
     ```
+
+# Reference 
+    - <a href="https://littlefoxdiary.tistory.com/46"> blog post </a>
+    - <a href="https://huggingface.co/blog/how-to-generate"> How to generate text: using different decoding methods for language generation with Transformers </a>
