@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Decoding Methods For Language Generation 
-subtitle: greedy search, beam search, sampling, top-k sampling, top-p (nucleus) sampling 등을 정리합니다. 
+title: Decoding Methods For Language Generation (sampling, top-K sampling, top-p samping)
+subtitle: sampling, top-k sampling, top-p (nucleus) sampling 등을 정리합니다. 
 categories: Study  # [Paper-review, Study] 
 tags: nlp decoding-strategy
 comments: True
-published: False
+published: True
 ---
 
 <!-- - All of the following functionalities can be used for auto-regressive language generation (GPT2, XLNet, OpenAi-GPT, CTRL, TransfoXL, XLM, Bart, T5 in both PyTorch and Tensorflow >= 2.0!) In short, auto-regressive language generation is based on the assumption that the probability distribution of a word sequence can be decomposed into the product of conditional next word distributions:
