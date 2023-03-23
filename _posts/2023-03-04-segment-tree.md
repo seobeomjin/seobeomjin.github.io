@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [알고리즘] Segment Tree (Python)
+title: \[알고리즘] Segment Tree (Python)
 subtitle: segment tree 
 categories: Study  # [Paper-review, Study] 
 tags: algorithm segment-tree
