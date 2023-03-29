@@ -7,39 +7,36 @@ tags: probability random-variable
 comments: True
 published: True
 ---
-
-# Probbaility Basic 
-
-## **Elements of probability**
+## Elements of probability
 - sample space
 - set of outcomes
 - probability measures
     - event 가 입력으로 들어왔을 떄 거기에 대응되는 함수
 - 몇몇 properites
-
-## **Random Variables**
+## Random Variables
 - Probability Measure for Random Variable
-    - CDF
-        - culmulative
-    - PMF (Mass Function)
-        - discrete 한 경우 
-    - PDF (Density Function)
-        - continuous 한 경우 
-        - density function 의 prob 자체는 매우 큰 무한대까지 가질 수 있음. 왜냐면, x의 범위가 어어어어엄청 0에 가깝게 작아지면, 적분하면 1이 되어야 해서.
+    - CDF <br>
+        - culmulative <br>
+    - PMF (Mass Function) <br>
+        - discrete 한 경우 <br>
+    - PDF (Density Function) <br>
+        - continuous 한 경우 <br>
+        - density function 의 prob 자체는 매우 큰 무한대까지 가질 수 있음. 왜냐면, x의 범위가 어어어어엄청 0에 가깝게 작아지면, 적분하면 1이 되어야 해서. <br>
         - 어떤 RV x 에서 어떤 RV y 에 대한 분포를 transformation 해서 구한다고 생각해보자.<br>
             y = f(x) 일 때,  P_y(y) = P_x(x)*|gradient| 로 구해짐. <br>
-            일반적으로 vector의 경우도 그러함. 여기서 f를 NN 으로 쓰게 되면, invertible 하지 않기 때문에 y의 likelihood 를 구할 수가 없음. 
-        - Normalizing Flow
-            ![img](../assets/images/prob/nf.png)
-            Normalizing Flwo는 invertible transformation 을 통해 점점 좀 더 복잡한 distritbuiton 을 invertible한 연산을 통해 만들어 나간다. 이를 통해 최종 target variable의 probability distribution을 invertible transformation을 통해 추적할 수 있다. 
-        - Masked Autoregressive Flow
-            ![img](../assets/images/prob/maf.png) <br>
-            각 step을 거치며 지나는 분포를 NN의 invertible 함에서 얻는 것이 아니라, NN의 autoregressive 함을 통해 각 step의 평균과 분산을 얻는다. base distribution을 정보와 이전 스텝의 평균, 분산 정보를 활용하여 해당 step i의 x_i 값을 구한다.
-        
-        - Inverse Augoregressive Flow
-            ![img](../assets/images/prob/iaf.png) <br>
-            위의 MAF 는 sampling 과정의 속도가 heavy해서, 평균과 분산을 얻는 것을 base distribution 에서 뽑아보자는 제안
-- Expectation & Variance
+            일반적으로 vector의 경우도 그러함. 여기서 f를 NN 으로 쓰게 되면, invertible 하지 않기 때문에 y의 likelihood 를 구할 수가 없음. <br>
+        - Normalizing Flow <br>
+            ![img](/assets/images/prob/nf.png) <br>
+            Normalizing Flwo는 invertible transformation 을 통해 점점 좀 더 복잡한 distritbuiton 을 invertible한 연산을 통해 만들어 나간다. <br>
+            이를 통해 최종 target variable의 probability distribution을 invertible transformation을 통해 추적할 수 있다. <br>
+        - Masked Autoregressive Flow <br>
+            ![img](/assets/images/prob/maf.png) <br>
+            각 step을 거치며 지나는 분포를 NN의 invertible 함에서 얻는 것이 아니라, NN의 autoregressive 함을 통해 각 step의 평균과 분산을 얻는다. <br>
+            base distribution을 정보와 이전 스텝의 평균, 분산 정보를 활용하여 해당 step i의 x_i 값을 구한다. <br>
+        - Inverse Augoregressive Flow <br>
+            ![img](/assets/images/prob/iaf.png) <br>
+            위의 MAF 는 sampling 과정의 속도가 heavy해서, 평균과 분산을 얻는 것을 base distribution 에서 뽑아보자는 제안 <br>
+- Expectation & Variance <br>
     - Expectation 은,, E[X] = sum(p_x*x) 임
     - Distrete Distribution
         - Bernoulli (Binary Distribution)
@@ -84,27 +81,38 @@ published: True
             - joint distribution 이 normal 이면 marginal distribution도 normal 이다!
             - joint distribution 이 normal 이면 conditional distribution 도 normal이다!
                 - 다소 복잡한(?) 값을 과정과 값을 가지지만, Schur complement 에 의해 Precision Matrix (Covariance의 Inverse Matrix) 의 값을 활용하여 계산하면, normal distribution 이 됨을 보일 수 있음
-                
-## **2 RULES ! (Important)**
-- conditinal probabiltiy
-    - 일반적으로 딥러닝은, 기존의 데이터 X 가 주어질 때 , 새로운 보지 않은 데이터 X’ 가 나올 확률을 구하는 문제이다. 따라서 조건부 확률적인 부분이 중요하다.
+## 2 RULES! (Important)
+- conditinal probabiltiy <br>
+    - 일반적으로 딥러닝은, 기존의 데이터 X 가 주어질 때 , 새로운 보지 않은 데이터 X’ 가 나올 확률을 구하는 문제이다. 따라서 조건부 확률적인 부분이 중요하다. <br>
     $$
     P_{Y|X}(y|x) = \frac{P_{X,Y}(x,y)}{P_X(x)}
     $$
-    - 즉, conditional probability 는 “x가 이미 발생한 이후, joint distritbution 이 발생한 경우” 로 볼 수 있음
-
+    - 즉, conditional probability 는 “x가 이미 발생한 이후, joint distritbution 이 발생한 경우” 로 볼 수 있음<br>
+    - 참고 <br>
+        - joint distribution P(X,Y) <br>
+            어떤 사건 X,Y가 동시에 일어나는 확률 분포 <br>
+        - conditional distribution P(X|Y) <br>
+            사건 Y가 일어났을 때, 사건 X 가 일어날 확률 분포 <br>
+        - marginal distribution P(X) or P(Y)  <br>
+            joint distribution 이 다변수를 고려한다면, 그 중 하나의 변수를 고려할 때, "marginalized 되었다" 라고 표현한다. <br>
+            하나의 변수는 상수 취급하고, 하나의 변수만 취급하는 식으로 더 적은 변수들만 고려하는 경우 <br>
+            (다변수에서 상대적으로 더 적은 변수를 고려할 때) <br>
+            
 - **sum rule**
-    - P(x) = sum(P(x,y)) (y에대해 summation 할 때)
-        - joint prob p(x,y) 를 y 또는 x 하나의 변수에 대해서 summation하면 marginal distribution을 얻을 수 있음.
-    - continuous 한 경우는 integral 을 써서 보이면 됨.
+    - P(x) = sum(P(x,y)) (y에대해 summation 할 때) <br>
+        - joint prob p(x,y) 를 y 또는 x 하나의 변수에 대해서 summation하면 marginal distribution을 얻을 수 있음.<br>
+    - continuous 한 경우는 integral 을 써서 보이면 됨.<br>
 
 - **product rule**
     - joint distribution = conditional distribution * marginal distribution 이 됨.<br>
-    - P(X,Y) = P(Y|X) * P(X) = P(X|Y) * P(Y)<br>
-    - ex<br>
-        - marginal prob P(Y)  <br>
-        = summation of {joint distribution} <br>
-        = P(Y_o|X_red) + P(Y_o|X_blue) <br>
+    - P(X,Y) <br>
+        = P(Y|X) * P(X) <br>
+        = P(X|Y) * P(Y) <br>
+    - Example <br>
+        marginal prob P(Y_o)  <br>
+        = P(Y_o, X_red) + P(Y_o, X_blue)
+        = summation of {joint distribution} (joint dist. 은 product rule로 conditional dist. * marginal dist. 로 표현 가능) <br>
+        = P(Y_o|X_red) * P(X_red) + P(Y_o|X_blue) * P(X_blue) <br>
             (각 joint distribution = product rule 로 값을 표현할 수 있음)<br>
             so, <br>
             = product rule_1 + product_rule_2 <br>
