@@ -8,11 +8,12 @@ comments: True
 published: True
 ---
 ## Elements of probability
-- sample space
+- sample space 
 - set of outcomes
 - probability measures
     - event 가 입력으로 들어왔을 떄 거기에 대응되는 함수
 - 몇몇 properites
+
 ## Random Variables
 - Probability Measure for Random Variable
     - CDF <br>
@@ -81,6 +82,7 @@ published: True
             - joint distribution 이 normal 이면 marginal distribution도 normal 이다!
             - joint distribution 이 normal 이면 conditional distribution 도 normal이다!
                 - 다소 복잡한(?) 값을 과정과 값을 가지지만, Schur complement 에 의해 Precision Matrix (Covariance의 Inverse Matrix) 의 값을 활용하여 계산하면, normal distribution 이 됨을 보일 수 있음
+                
 ## 2 RULES! (Important)
 - conditinal probabiltiy <br>
     - 일반적으로 딥러닝은, 기존의 데이터 X 가 주어질 때 , 새로운 보지 않은 데이터 X’ 가 나올 확률을 구하는 문제이다. 따라서 조건부 확률적인 부분이 중요하다. <br>

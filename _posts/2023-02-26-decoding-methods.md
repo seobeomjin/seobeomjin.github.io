@@ -121,5 +121,5 @@ published: True
     ```
 
 # Reference 
-    - <a href="https://littlefoxdiary.tistory.com/46"> blog post </a>
-    - <a href="https://huggingface.co/blog/how-to-generate"> How to generate text: using different decoding methods for language generation with Transformers </a>
+- <a href="https://littlefoxdiary.tistory.com/46"> blog post </a>
+- <a href="https://huggingface.co/blog/how-to-generate"> How to generate text: using different decoding methods for language generation with Transformers </a>
