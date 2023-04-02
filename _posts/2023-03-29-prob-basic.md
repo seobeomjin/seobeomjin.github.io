@@ -82,13 +82,11 @@ published: True
             - joint distribution 이 normal 이면 marginal distribution도 normal 이다!
             - joint distribution 이 normal 이면 conditional distribution 도 normal이다!
                 - 다소 복잡한(?) 값을 과정과 값을 가지지만, Schur complement 에 의해 Precision Matrix (Covariance의 Inverse Matrix) 의 값을 활용하여 계산하면, normal distribution 이 됨을 보일 수 있음
-                
+
 ## 2 RULES! (Important)
 - conditinal probabiltiy <br>
     - 일반적으로 딥러닝은, 기존의 데이터 X 가 주어질 때 , 새로운 보지 않은 데이터 X’ 가 나올 확률을 구하는 문제이다. 따라서 조건부 확률적인 부분이 중요하다. <br>
-    $$
-    P_{Y|X}(y|x) = \frac{P_{X,Y}(x,y)}{P_X(x)}
-    $$
+    $$P_{Y|X}(y|x) = \frac{P_{X,Y}(x,y)}{P_X(x)}$$
     - 즉, conditional probability 는 “x가 이미 발생한 이후, joint distritbution 이 발생한 경우” 로 볼 수 있음<br>
     - 참고 <br>
         - joint distribution P(X,Y) <br>
@@ -112,13 +110,15 @@ published: True
         = P(X|Y) * P(Y) <br>
     - Example <br>
         marginal prob P(Y_o)  <br>
-        = P(Y_o, X_red) + P(Y_o, X_blue)
-        = summation of {joint distribution} (joint dist. 은 product rule로 conditional dist. * marginal dist. 로 표현 가능) <br>
+        = P(Y_o, X_red) + P(Y_o, X_blue) <br>
+        = summation of {joint distribution} <br>
+          (joint dist. 은 product rule로 conditional dist. * marginal dist. 로 표현 가능) <br>
         = P(Y_o|X_red) * P(X_red) + P(Y_o|X_blue) * P(X_blue) <br>
             (각 joint distribution = product rule 로 값을 표현할 수 있음)<br>
             so, <br>
             = product rule_1 + product_rule_2 <br>
             (이 값들은 구할 수 있는 경우 有)<br>
+    - opinion) joint distribution을 conditional dist. 와 좀 더 적은 변수를 고려하는 marginal dist.로 분해할 수 있는 product rule이 꽤나 유용한 거 같음 <br>
 
 ## Self 문답 
 1. implicit 의 의미는? <br>
