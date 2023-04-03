@@ -9,27 +9,31 @@ published: True
 ---
 
 ## Intro 
-- 분절 규칙의 update 과정 
-    공백 분절 -> 구두점 및 여러 symbol들이 포함됨 -> 구두점 분절 -> ex) [Don, ', t] 와 같이 분절이 됨 -> new rule 이 필요하다! 
-- BERT style tokenizer doesn't fit to the GPT model input 
-- Transformer XL 은 공백/구두점을 기준으로 분절 수행 -> vocab size = 267,735 개 
-    - large size embedding matrix -> memory 이슈가 발생할 수도 있음
-      (Adaptive Embedding 으로 일부는 해소)
-- word 기반 tokenizer 
-    word representation 의미를 잘 담고 있지만, vocab size가 커지고, memory 이슈가 발생할 수 있음
-- char 기반 tokenizer
-    vocab 사이즈는 작아서 memory 이슈는 적겠지만, word 의 의미가 깨져서 학습 성능을 저하함
-- subword 기반 tokenizer 의 등장 
-    - word 기반 tokenizer 와 char 기반 tokenizer 사이의 중간 지점. 
-    - 자주 등장하는 word는 그대로 두고, 자주 등장하지 않지만 의미를 가진 부분을 sub-word로 표현 
-    - 장점
-        -> 적절한 vocab size 구성 가능 & word representation 학습 가능 
-        -> 훈련과정에서 만나지 않은 단어도 분절가능 
-    - corpus 를 통해 분절 규칙을 훈련을 시키고, vocab을 구성해야 함 
-    - ex) BPE tokenizer, WordPiece tokenizer, Unigram tokenizer, SentencePiece tokenizer 
+- 분절 규칙의 update 과정 <br>
+    공백 분절 -> 구두점 및 여러 symbol들이 포함됨 -> 구두점 분절 -> ex) [Don, ', t] 와 같이 분절이 됨 -> new rule 이 필요하다! <br>
+- BERT style tokenizer doesn't fit to the GPT model input <br>
+- Transformer XL 은 공백/구두점을 기준으로 분절 수행 -> vocab size = 267,735 개 <br>
+    - large size embedding matrix -> memory 이슈가 발생할 수도 있음 <br>
+      (Adaptive Embedding 으로 일부는 해소) <br>
+- word 기반 tokenizer <br>
+    word representation 의미를 잘 담고 있지만, vocab size가 커지고, memory 이슈가 발생할 수 있음 <br>
+- char 기반 tokenizer <br>
+    vocab 사이즈는 작아서 memory 이슈는 적겠지만, word 의 의미가 깨져서 학습 성능을 저하함 <br>
+- subword 기반 tokenizer 의 등장 <br>
+    - word 기반 tokenizer 와 char 기반 tokenizer 사이의 중간 지점. <br>
+    - 자주 등장하는 word는 그대로 두고, 자주 등장하지 않지만 의미를 가진 부분을 sub-word로 표현 <br>
+    - 장점 <br>
+        -> 적절한 vocab size 구성 가능 & word representation 학습 가능 <br>
+        -> 훈련과정에서 만나지 않은 단어도 분절가능 <br>
+    - corpus 를 통해 분절 규칙을 훈련을 시키고, vocab을 구성해야 함 <br>
+    - ex) BPE tokenizer, WordPiece tokenizer, Unigram tokenizer, SentencePiece tokenizer <br>
 
 
 ## Byte Pair Encoding Tokenizer (feat.GPT3)
+- 한줄 요약 <br>
+    각 pair 의 등장 빈도가 높은 것을 merge rule로 삼으면서 동시에 vocab에 추가해 나가며 vocab을 확장한다. <br>
+    추후 얻어진 vocab과 merge rule을 통해 unseen words 에 대해서도 tokenizing 수행 <br>
+
 - **HOW TO MAKE VOCABS**
     1. corpus를 단어 단위(or rule 기반)로 pre-tokenize 해주고, 단어들을 1 charater로 split 함. (-> 초기 vocab 구성) 
     2. bi-pair window를 sliding 하며 각 pairs freqeuncy 를 계산함. 
@@ -52,6 +56,9 @@ published: True
 ## byte-level BPE tokenizer 
 
 ## Word Piece Tokenizer (feat.BERT)
+- 한줄 요약  <br>
+    각 pair 의 likehood 가 높은 것 (score가 높은 것)을 vocab에 추가해 나가며, vocab size를 확장한다. <br>
+
 - **HOW TO MAKE VOCABS**
     1. corpus를 단어 단위(or rule 기반)로 pre-tokenize 해주고, 각 단어들을 char 단위로 split 함. 
         단어의 맨 앞에 오는 char은 간단히 쓰고, 단어의 중간과 끝은 앞에 “##”을 삽입해서 이어지는 부분임을 표시 → (초기 vocab 구성) 
