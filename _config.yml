@@ -148,7 +148,7 @@ translate_langs:
 # Page default value
 defaults:
   home:
-    heading: "Logging by myself 🫡"
+    heading: "Jin's Log 🫡"
     subheading: ""
     banner: ""
 
