@@ -53,7 +53,10 @@ published: True
     3. merge rule을 다 거쳐서 [hug, s] 가 됨. 
     4. 만약 vocab에 없는 token이 나올 경우, [UNK] 의 unknown token 이 생성됨.
 
-## byte-level BPE tokenizer 
+## byte-level BPE tokenizer (feat.GPT2)
+- 사전이 모든 유니코드 캐릭터들을 지니게 하기 위해서는 꽤나 큰 사전 단위가 필요. 
+- GPT2 에서는 tricky 하게 byte를 사전의 기본 단위로 사용함. 여기에 구두점을 처리하기 위한 몇 가지 규칙을 추가, <unk> 치환 없이 모든 텍스트를 분절할 수 있게 됨 
+- 256개의 기본 byte token + <end-of-text> token + 50,000개의 subword token = 50,257 tokens 
 
 ## Word Piece Tokenizer (feat.BERT)
 - 한줄 요약  <br>

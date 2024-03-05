@@ -148,7 +148,7 @@ translate_langs:
 # Page default value
 defaults:
   home:
-    heading: "My AI learning logs :-)"
+    heading: "Logging by myself 🫡"
     subheading: ""
     banner: ""
 
