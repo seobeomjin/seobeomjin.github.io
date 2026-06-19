@@ -198,3 +198,11 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
+
+# Archived legacy tech-blog source — kept in repo but not built/served.
+exclude:
+  - legacy_archived
+  - Gemfile
+  - Gemfile.lock
+  - jekyll-theme-yat.gemspec
+  - vendor
