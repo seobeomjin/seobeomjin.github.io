@@ -3,3 +3,11 @@
 .sass-cache
 _site
 Gemfile.lock
+run.sh
+.claude
+instruction/
+STRUCTURE.md
+.DS_Store
+**/.DS_Store
+assets/cv/resume_SEOBEOMJIN_260620.pdf
+assets/cv/resume_SEOBEOMJIN_260620.docx

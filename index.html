@@ -14,11 +14,11 @@
   <meta name="description" content="Beomjin Seo (서범진) — AI Researcher &amp; Engineer. On-device LLM/LMM training and evaluation." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <style>
     :root {
       --accent: #ff5100;
-      --maxw: 760px;
+      --maxw: 900px;
       /* light theme (default) */
       --ink: #1d1d1f;
       --muted: #6b6b70;
@@ -47,10 +47,10 @@
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
       color: var(--ink);
       background: var(--bg);
-      line-height: 1.65;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
     a { color: var(--accent); text-decoration: none; }
@@ -77,6 +77,7 @@
     }
     .nav-inner::-webkit-scrollbar { display: none; }
     .nav a {
+      font-family: "Source Serif 4", Georgia, serif;
       color: var(--muted);
       font-size: 0.82rem;
       font-weight: 600;
@@ -109,8 +110,9 @@
     main { max-width: var(--maxw); margin: 0 auto; padding: 0 1rem 5rem; }
     section { padding-top: 3.5rem; scroll-margin-top: 4rem; }
     h2.section-title {
+      font-family: "Source Serif 4", Georgia, serif;
       font-size: 1.5rem;
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: -0.01em;
       margin: 0 0 1.4rem;
       padding-bottom: 0.5rem;
@@ -119,26 +121,41 @@
     }
 
     /* ---- hero / bio ---- */
-    .hero { display: flex; gap: 2rem; align-items: center; padding-top: 3.5rem; flex-wrap: wrap; }
-    .hero img {
-      width: 200px; height: 200px; border-radius: 50%;
-      object-fit: cover; object-position: center 25%;
-      border: 4px solid var(--bg);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.20);
+    .hero { display: flex; gap: 3.5rem; align-items: flex-start; padding-top: 3.5rem; }
+    .hero-left {
       flex-shrink: 0;
+      display: flex; flex-direction: column; align-items: center;
+      width: 180px;
     }
-    .hero h1 { margin: 0 0 0.2rem; font-size: 2.15rem; letter-spacing: -0.02em; }
-    .hero .role { margin: 0; color: var(--accent); font-weight: 600; font-size: 1.05rem; }
-    .hero .loc { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.95rem; }
-    .links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
+    .hero-left img {
+      width: 180px; height: 180px; border-radius: 10px;
+      object-fit: cover; object-position: center 15%;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    }
+    .links {
+      display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap;
+      gap: 0; margin-top: 0.9rem; white-space: nowrap;
+    }
     .links a {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      padding: 0.5rem 0.95rem; font-size: 0.9rem; font-weight: 600;
-      color: var(--ink); border: 1px solid var(--line); border-radius: 999px;
-      transition: border-color 0.15s, color 0.15s, background 0.15s;
+      font-size: 0.88rem; font-weight: 600;
+      color: var(--accent);
     }
-    .links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
-    .bio-text { margin-top: 1.6rem; color: var(--ink); }
+    .links a:hover { text-decoration: underline; }
+    .links .sep {
+      color: var(--muted); margin: 0 0.45rem; font-size: 0.88rem; user-select: none;
+    }
+    .hero-right { flex: 1; min-width: 0; }
+    .hero-right h1 { margin: 0 0 0.5rem; font-size: 2rem; letter-spacing: -0.02em; }
+    .hero-right .role { margin: 0; color: var(--muted); font-weight: 500; font-size: 1rem; }
+    .bio-text { margin-top: 1rem; color: var(--ink); }
+
+    @media (max-width: 560px) {
+      .hero { flex-direction: column; align-items: center; gap: 1.5rem; }
+      .hero-left { width: 140px; }
+      .hero-left { width: 140px; }
+      .hero-left img { width: 140px; height: 140px; }
+      .hero-right h1 { font-size: 1.6rem; }
+    }
 
     /* ---- cards / items ---- */
     .item { padding: 1.1rem 0; border-bottom: 1px solid var(--line); }
@@ -171,11 +188,6 @@
 
     footer { max-width: var(--maxw); margin: 0 auto; padding: 2rem 1rem 3rem; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); }
 
-    @media (max-width: 560px) {
-      .hero { gap: 1.2rem; }
-      .hero img { width: 150px; height: 150px; }
-      .hero h1 { font-size: 1.7rem; }
-    }
   </style>
 </head>
 <body>
@@ -185,8 +197,7 @@
       <a href="#projects" class="nav-link">Projects</a>
       <a href="#experience" class="nav-link">Work Experience</a>
       <a href="#education" class="nav-link">Education</a>
-      <a href="#cv" class="nav-link">CV</a>
-      <button id="theme-toggle" class="theme-toggle" type="button"
+<button id="theme-toggle" class="theme-toggle" type="button"
               aria-label="Toggle light/dark theme" title="Toggle light/dark theme">🌙</button>
     </div>
   </nav>
@@ -195,27 +206,29 @@
     <!-- ============ BIO ============ -->
     <section id="bio">
       <div class="hero">
-        <img src="assets/img/profile.jpg" alt="Beomjin Seo" />
-        <div>
-          <h1>Beomjin Seo</h1>
-          <p class="role">AI Research Engineer</p>
-          <p class="loc">서범진 · Seoul, Republic of Korea</p>
+        <div class="hero-left">
+          <img src="assets/img/me2.jpg" alt="Beomjin Seo" />
+          <div class="links">
+            <a href="mailto:chon0412@gmail.com">Email</a>
+            <span class="sep">|</span>
+            <a href="https://www.linkedin.com/in/beomjin-seo/" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="sep">|</span>
+            <a href="https://github.com/seobeomjin" target="_blank" rel="noopener">GitHub</a>
+            <span class="sep">|</span>
+            <a href="assets/cv/cv.pdf" target="_blank" rel="noopener">CV</a>
+          </div>
         </div>
-      </div>
-
-      <p class="bio-text">
-        I build and study large-scale models, with a focus on training and evaluating
-        <strong>on-device LLMs and LMMs</strong>. My work spans efficient multi-node
-        pretraining, vision–text multimodal learning, and post-training from supervised
-        fine-tuning to reinforcement-learning variants. I care about making capable models
-        small and efficient enough to run where people actually use them.
-      </p>
-
-      <div class="links">
-        <a href="mailto:chon0412@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/beomjin-seo/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/seobeomjin" target="_blank" rel="noopener">GitHub</a>
-        <a href="#cv">CV</a>
+        <div class="hero-right">
+          <h1>Beomjin Seo</h1>
+          <p class="role">AI Engineer · Seoul, South Korea</p>
+          <p class="bio-text">
+            I build and study large-scale models, with a focus on training and evaluating
+            <strong>on-device LLMs and LMMs</strong>. My work spans efficient multi-node
+            pretraining, vision–text multimodal learning, and post-training from supervised
+            fine-tuning to reinforcement-learning variants. I care about making capable models
+            small and efficient enough to run where people actually use them.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -319,17 +332,6 @@
       </div>
     </section>
 
-    <!-- ============ CV ============ -->
-    <section id="cv">
-      <h2 class="section-title">CV</h2>
-      <div class="cv-card">
-        <div>
-          <p style="margin:0;font-weight:700;font-size:1.05rem;">Curriculum Vitae</p>
-          <p style="margin:0.25rem 0 0;color:var(--muted);font-size:0.9rem;">Full résumé — updated June 2026 (PDF).</p>
-        </div>
-        <a class="cv-btn" href="assets/cv/resume_SEOBEOMJIN_260620.pdf" target="_blank" rel="noopener">Open CV (PDF) →</a>
-      </div>
-    </section>
   </main>
 
   <footer>
