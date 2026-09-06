@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,14 +19,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --accent: #ff5100;
+      --accent: #166534;
       --maxw: 900px;
       /* light theme (default) */
       --ink: #1d1d1f;
       --muted: #6b6b70;
       --line: #e7e7ea;
-      --bg: #ffffff;
-      --card: #fafafa;
+      --bg: #f9f6f1;
+      --card: #f2ede6;
     }
     /* dark palette, shared by auto (system) and manual override */
     @media (prefers-color-scheme: dark) {
@@ -148,6 +150,17 @@
     .hero-right h1 { margin: 0 0 0.5rem; font-size: 2rem; letter-spacing: -0.02em; }
     .hero-right .role { margin: 0; color: var(--muted); font-weight: 500; font-size: 1rem; }
     .bio-text { margin-top: 1rem; color: var(--ink); }
+    .bio-text p { margin: 0 0 0.8rem; }
+    .bio-text ul { margin: 0 0 0.8rem; padding-left: 1.2rem; }
+    .bio-text ul li { margin: 0.4rem 0; }
+    .hobby-photos {
+      display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.2rem;
+    }
+    .hobby-photos img {
+      height: 80px; width: auto; border-radius: 6px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
 
     @media (max-width: 560px) {
       .hero { flex-direction: column; align-items: center; gap: 1.5rem; }
@@ -221,13 +234,9 @@
         <div class="hero-right">
           <h1>Beomjin Seo</h1>
           <p class="role">AI Engineer · Seoul, South Korea</p>
-          <p class="bio-text">
-            I build and study large-scale models, with a focus on training and evaluating
-            <strong>on-device LLMs and LMMs</strong>. My work spans efficient multi-node
-            pretraining, vision–text multimodal learning, and post-training from supervised
-            fine-tuning to reinforcement-learning variants. I care about making capable models
-            small and efficient enough to run where people actually use them.
-          </p>
+          <div class="bio-text">
+            {% include bio.html %}
+          </div>
         </div>
       </div>
     </section>
