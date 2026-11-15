@@ -1,0 +1,46 @@
+---
+nav: blog
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include site-head.html %}
+  <title>Blog - Beomjin Seo</title>
+  <meta name="description" content="Beomjin Seo (서범진) - Blog posts." />
+</head>
+<body>
+  {% include site-nav.html %}
+
+  <main>
+    <section id="blog">
+      <h1 class="section-title">Blog</h1>
+
+      {% if site.posts.size > 0 %}
+        {% for post in site.posts %}
+          <div class="item">
+            <div class="item-head">
+              <h3 class="item-title">
+                {% if post.tbd %}
+                  {{ post.title }} (TBD)
+                {% else %}
+                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                {% endif %}
+              </h3>
+              <span class="item-date">{{ post.date | date: "%b %d, %Y" }}</span>
+            </div>
+            {% if post.tbd %}
+              <p style="color: var(--muted);">Preparing - content coming soon.</p>
+            {% elsif post.excerpt %}
+              <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      {% else %}
+        <p style="color: var(--muted);">No posts yet - coming soon.</p>
+      {% endif %}
+    </section>
+  </main>
+
+  {% include site-foot.html %}
+</body>
+</html>

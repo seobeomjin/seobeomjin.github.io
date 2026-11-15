@@ -1,0 +1,88 @@
+---
+nav: bio
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include site-head.html %}
+  <title>Bio - Beomjin Seo</title>
+  <meta name="description" content="Beomjin Seo (서범진) - Bio, research interests, work experience, and education." />
+</head>
+<body>
+  {% include site-nav.html %}
+
+  <main>
+    <!-- ============ BIO ============ -->
+    <section id="bio">
+      <h1 class="section-title">Bio</h1>
+      <div class="bio-text">
+        {% include bio.html %}
+      </div>
+    </section>
+
+    <!-- ============ WORK EXPERIENCE ============ -->
+    <section id="experience">
+      <h2 class="section-title">Work Experience</h2>
+
+      <div class="item">
+        <div class="item-head">
+          <div>
+            <h3 class="item-title">Samsung Research - Full time </h3>
+            <p class="item-sub">AI Core Team · Engineer</p>
+          </div>
+          <span class="item-date">Jul 2022 – Present</span>
+        </div>
+        <ul>
+          <li><strong>Developing LLM/VLMs for devices:</strong> trained VLMs from scratch, from pre-training to post-training, to serve on-device AI models on Samsung devices. Mainly focused on pre-training. (efficient architecture search and training algorithms).
+
+          <li><strong>Developing LLMs for cloud services:</strong> trained LLMs from scratch, from pre-training to post-training, to serve LLMs for Samsung Electronic workers. Mainly focused on post-training and evaluations. (synthetic-data generation pipelines, data-mix strategies and evaluation of several perspectives)
+
+          <li><strong>Semantic Deep Search for TV manuals:</strong> prepared domain-specific datasets, trained task-specific deep-search models, and compressed model weights.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <div>
+            <h3 class="item-title">Kim Jaechul Graduate School of AI at KAIST - Intern</h3>
+            <p class="item-sub">Research Intern, Edward's Lab (mentor: Prof. Edward Choi)</p>
+          </div>
+          <span class="item-date">Jul 2021 – Aug 2021</span>
+        </div>
+        <ul>
+          <li>Developed a multimodal dataset from Wikipedia and ran a proof-of-concept with it.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <div>
+            <h3 class="item-title">KIST Europe - Intern</h3>
+            <p class="item-sub">Research Intern, Smart Convergence Group (mentor: Dr. Sangrak Lim) · Saarbrücken, Germany</p>
+          </div>
+          <span class="item-date">Feb 2020 – Aug 2020</span>
+        </div>
+        <ul>
+          <li>Worked on QSAR model development and molecular docking using graph attentional network models.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="item">
+        <div class="item-head">
+          <div>
+            <h3 class="item-title">Kyung Hee University</h3>
+            <p class="item-sub">B.S. in Software Convergence &amp; Biomedical Engineering · GPA 4.1 / 4.5</p>
+          </div>
+          <span class="item-date">Mar 2015 – Feb 2022</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {% include site-foot.html %}
+</body>
+</html>

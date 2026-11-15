@@ -1,0 +1,34 @@
+<footer>
+  © <span id="year"></span> Beomjin Seo · Built as a personal page.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // ---- Theme toggle (light / dark / follow-system) ----
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById("theme-toggle");
+    var media = window.matchMedia("(prefers-color-scheme: dark)");
+
+    function isDark() {
+      var t = root.dataset.theme;
+      return t ? t === "dark" : media.matches;
+    }
+    function syncIcon() {
+      // show the icon for the mode you'll switch TO
+      btn.textContent = isDark() ? "☀️" : "🌙";
+    }
+    btn.addEventListener("click", function () {
+      var next = isDark() ? "light" : "dark";
+      root.dataset.theme = next;
+      localStorage.setItem("theme", next);
+      syncIcon();
+    });
+    // keep icon in sync if following the system and the OS theme changes
+    media.addEventListener("change", function () {
+      if (!root.dataset.theme) syncIcon();
+    });
+    syncIcon();
+  })();
+</script>

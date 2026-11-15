@@ -1,0 +1,9 @@
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="{{ '/' | relative_url }}" class="{% if page.nav == 'home' %}active{% endif %}">Home</a>
+    <a href="{{ '/bio.html' | relative_url }}" class="{% if page.nav == 'bio' %}active{% endif %}">Bio</a>
+    <a href="{{ '/blog.html' | relative_url }}" class="{% if page.nav == 'blog' %}active{% endif %}">Blog</a>
+    <button id="theme-toggle" class="theme-toggle" type="button"
+            aria-label="Toggle light/dark theme" title="Toggle light/dark theme">🌙</button>
+  </div>
+</nav>
